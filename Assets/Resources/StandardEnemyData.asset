@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hp: 1
   Score: 100
-  MoveSpeed: 0.1
+  MoveSpeed: 0.3

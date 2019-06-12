@@ -12,6 +12,13 @@ public class EnemyGenerator : MonoBehaviour
     /// <summary>ポーズマネージャー</summary>
     public GameObject PauseManager;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        // 初期化
+        Initialize();
+    }
+
     /// <summary>
     /// 初期化
     /// </summary>
@@ -23,7 +30,6 @@ public class EnemyGenerator : MonoBehaviour
         // 子要素の生成場所を配列で取得
         EnemyGeneratSpots = gameObject.GetComponentsInChildrenWithoutSelf<Transform>();
     }
-
 
     /// <summary>
     /// 指定した場所から敵キャラを生成する

@@ -23,15 +23,6 @@ public class FirstStageEnemyGenerator : EnemyGenerator
         BottomRight
     }
 
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        // 初期化
-        base.Initialize();
-    }
-
     // Update is called once per frame
     void Update()
     {

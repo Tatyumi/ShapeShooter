@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class ScoreController : MonoBehaviour
 {
+    /// <summary>スコア</summary>
+    public static int score = 0;
     /// <summary>スコアテキスト</summary>
     private static Text scoreText;
-    /// <summary>スコア</summary>
-    private static int score = 0;
 
     // Start is called before the first frame update
     void Start()

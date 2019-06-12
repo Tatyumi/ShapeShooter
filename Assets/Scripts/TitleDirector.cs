@@ -39,6 +39,9 @@ public class TitleDirector : MonoBehaviour
         // 残機数初期化
         LifeCountTextController.LifeCount = 3;
 
+        // スコアの初期化
+        ScoreController.score = 0;
+
         // TODO BGMの再生
     }
 }

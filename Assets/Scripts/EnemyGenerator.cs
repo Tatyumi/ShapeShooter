@@ -7,10 +7,10 @@ public class EnemyGenerator : MonoBehaviour
 {
     // ステージのパーツ
     public GameObject StagePart;
-    // 各生成場所
-    public Transform[] EnemyGeneratSpots;
     /// <summary>ポーズマネージャー</summary>
     public GameObject PauseManager;
+    // 各生成場所
+    private Transform[] EnemyGeneratSpots;
 
     // Start is called before the first frame update
     void Start()

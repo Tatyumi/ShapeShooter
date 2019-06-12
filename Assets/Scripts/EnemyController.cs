@@ -6,12 +6,14 @@ public class EnemyController : MonoBehaviour
 {
     /// <summary>エネミーデータ</summary>
     public EnemyData EnemyData;
-    /// <summary>オーディオマネージャー</summary>
-    private AudioManager audioManager;
     /// <summary>体力</summary>
     protected int hp;
     /// <summary> 移動速度</summary>
     protected float moveSpeed;
+    /// <summary>オーディオマネージャー</summary>
+    private AudioManager audioManager;
+    /// <summary>破棄を行うx座標</summary>
+    private const float destroyPosx = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -62,7 +64,7 @@ public class EnemyController : MonoBehaviour
             // スコア加算
             ScoreController.AddScore(EnemyData.Score);
 
-            // 破壊処理
+            // 破棄する
             Destroy(gameObject);
         }
     }
@@ -70,9 +72,22 @@ public class EnemyController : MonoBehaviour
     /// <summary>
     /// 移動する
     /// </summary>
-    protected void Move()
+    protected virtual void Move()
     {
         // 移動
         transform.Translate(0, 0, moveSpeed);
+    }
+
+    /// <summary>
+    /// z座標の確認を行う
+    /// </summary>
+    protected void CheckPosZ(float posX)
+    {
+        // 指定のz座標を下回った場合
+        if (posX < destroyPosx)
+        {
+            // 破棄する
+            Destroy(gameObject);
+        }
     }
 }

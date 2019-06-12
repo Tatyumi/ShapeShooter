@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirstStageEnemyGenerator : EnemyGenerator
+public sealed class FirstStageEnemyGenerator : EnemyGenerator
 {
     /// <summary>敵キャラのプレファブ</summary>
     public GameObject EnemyPrefab;

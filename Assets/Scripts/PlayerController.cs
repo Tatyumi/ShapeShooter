@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-sealed public class PlayerController : MonoBehaviour
+public sealed class PlayerController : MonoBehaviour
 {
     /// <summary>ステージ</summary>
     public GameObject Stage;

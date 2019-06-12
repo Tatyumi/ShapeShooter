@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-sealed public class BulletController : MonoBehaviour
+public sealed class BulletController : MonoBehaviour
 {
     /// <summary>弾が発する光</summary>
     public GameObject BulletLight;

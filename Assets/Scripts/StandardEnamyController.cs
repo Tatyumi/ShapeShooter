@@ -1,5 +1,5 @@
 ﻿
-sealed public class StandardEnamyController : EnemyController
+public sealed class StandardEnamyController : EnemyController
 {
     // Update is called once per frame
     void Update()

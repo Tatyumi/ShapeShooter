@@ -20,15 +20,27 @@ public class EnemyController : MonoBehaviour
         Initialize();
     }
 
+    void Update()
+    {
+        // 移動
+        Move();
+
+        // z座標チェック
+        CheckPosZ(transform.position.z);
+    }
+
+
     /// <summary>
     /// 初期化
     /// </summary>
-    private void Initialize()
+    protected void Initialize()
     {
         // 音楽データの取得
         audioManager = AudioManager.Instance;
+
         // 体力の取得
         hp = EnemyData.Hp;
+
         // 移動速度の取得
         moveSpeed = EnemyData.MoveSpeed * -1;
     }

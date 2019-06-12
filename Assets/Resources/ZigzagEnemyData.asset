@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a46baf8dfb7f94183a19508b2c8188, type: 3}
   m_Name: ZigzagEnemyData
   m_EditorClassIdentifier: 
-  Hp: 0
-  Score: 0
-  MoveSpeed: 0
+  Hp: 1
+  Score: 200
+  MoveSpeed: 0.2

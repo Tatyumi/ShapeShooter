@@ -6,8 +6,6 @@ public class FirstStageDirector : MonoBehaviour
 {
     /// <summary>オーディオマネージャー</summary>
     private AudioManager audioManager;
-    /// <summary>ライフマネージャー</summary>
-    private LifeManager lifeManager;
 
     private void Awake()
     {
@@ -34,7 +32,5 @@ public class FirstStageDirector : MonoBehaviour
         // フラグ初期化
         PauseManager.isPause = false;
 
-        // 
-        lifeManager = LifeManager.Instance;
     }
 }

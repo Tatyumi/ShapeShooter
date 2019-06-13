@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using Common;
 
 public sealed class FirstStageEnemyGenerator : EnemyGenerator
 {
@@ -7,6 +8,8 @@ public sealed class FirstStageEnemyGenerator : EnemyGenerator
     public GameObject StandardEnemyPrefab;
     /// <summary>ジグザグエネミーのプレファブ</summary>
     public GameObject ZigzagdEnemyPrefab;
+    /// <summary>中ボス</summary>
+    public GameObject MiddelBoss;
 
     /// <summary>生成場所番号</summary>
     private enum GeneratSpot
@@ -172,6 +175,9 @@ public sealed class FirstStageEnemyGenerator : EnemyGenerator
 
         // 待機
         yield return nextPhase;
+
+        // 中ボスフェイズに移行
+        Phase.IsMiddleBoss = true;
 
         // 終了
         yield return null;

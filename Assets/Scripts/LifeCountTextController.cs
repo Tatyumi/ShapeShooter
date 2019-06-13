@@ -72,7 +72,7 @@ public sealed class LifeCountTextController : MonoBehaviour
             // 残機数が0より大きい場合
 
             // シーン再読み込み
-            StartCoroutine("SceneReload");
+            StartCoroutine(SceneReload());
         }
     }
 

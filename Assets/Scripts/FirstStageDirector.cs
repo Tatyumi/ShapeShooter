@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Common;
 using UnityEngine;
 
 public class FirstStageDirector : MonoBehaviour
@@ -26,6 +25,6 @@ public class FirstStageDirector : MonoBehaviour
 
         // フラグ初期化
         PauseManager.isPause = false;
-
+        Phase.IsMiddleBoss = false;
     }
 }

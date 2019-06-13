@@ -11,7 +11,7 @@ public class EnemyController : MonoBehaviour
     /// <summary> 移動速度</summary>
     protected float moveSpeed;
     /// <summary>オーディオマネージャー</summary>
-    private AudioManager audioManager;
+    protected AudioManager audioManager;
     /// <summary>破棄を行うx座標</summary>
     private const float destroyPosx = 0.0f;
 
@@ -49,7 +49,7 @@ public class EnemyController : MonoBehaviour
     /// <summary>
     /// ダメージを適用する
     /// </summary>
-    public void ApplyDamage()
+    public virtual void ApplyDamage()
     {
         // 体力を1減らす 
         hp -= 1;
@@ -57,14 +57,21 @@ public class EnemyController : MonoBehaviour
         // 体力が0以下の場合
         if (hp <= 0)
         {
-            // SE再生
-            audioManager.PlaySE(audioManager.DamageSE.name);
+            // 破壊SE再生
+            audioManager.PlaySE(audioManager.DestroySE.name);
 
             // スコア加算
             ScoreController.AddScore(EnemyData.Score);
 
             // 破棄する
             Destroy(gameObject);
+        }
+        else
+        {
+            // 体力が残っている場合
+
+            // ダメージSEを再生
+            audioManager.PlaySE(audioManager.DamageSE.name);
         }
     }
 

@@ -31,7 +31,6 @@ public class EnemyController : MonoBehaviour
         CheckPosZ(transform.position.z);
     }
 
-
     /// <summary>
     /// 初期化
     /// </summary>

@@ -45,5 +45,4 @@ sealed public class MainCameraController : MonoBehaviour
         // プレイヤーの移動速度を取得
         moveSpeed = Player.GetComponent<PlayerController>().MoveSpeed;
     }
-
 }

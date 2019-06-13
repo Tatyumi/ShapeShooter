@@ -5,6 +5,8 @@ public class FirstMiddleBossController : EnemyController
 {
     /// <summary>ステージ</summary>
     public GameObject Stage;
+    /// <summary>回転速度</summary>
+    private float rotateSpeed = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,7 @@ public class FirstMiddleBossController : EnemyController
     protected override void Move()
     {
         // 回転処理
-        transform.Rotate(0, moveSpeed, 0);
+        transform.Rotate(0, rotateSpeed, 0);
 
         // 中ボスのフェイズであり、かつ指定の座標に達しているか
         if (Phase.IsMiddleBoss && transform.localPosition.y >= -2.3f)

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 using System;
 
 public class PauseManager : MonoBehaviour
@@ -20,6 +19,9 @@ public class PauseManager : MonoBehaviour
     MonoBehaviour[] pausingMonoBehaviours;
     /// <summary>ポーズパネル</summary>
     public GameObject PausePanel;
+    /// <summary>エネミージェネレーター</summary>
+    public EnemyGenerator enemyGenerator;
+
 
     private void Start()
     {
@@ -43,12 +45,14 @@ public class PauseManager : MonoBehaviour
             if (isPause)
             {
                 // 中断
+                enemyGenerator.Stop();
                 Pause();
             }
             else
             {
                 // 再開
                 Resume();
+                enemyGenerator.Restart();
             }
 
             prevPausing = isPause;
@@ -114,5 +118,8 @@ public class PauseManager : MonoBehaviour
     {
         // ポーズパネルを非表示
         PausePanel.SetActive(false);
+
+        // enemyGeneratorのコンポーネントを取得
+        enemyGenerator = enemyGenerator.GetComponent<EnemyGenerator>();
     }
 }

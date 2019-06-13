@@ -64,4 +64,20 @@ public abstract class EnemyGenerator : MonoBehaviour
         // ゲームオブジェクトを指定の座標に配置
         gameObject.transform.SetPositionAndRotation(EnemyGeneratSpots[spotNum].position, EnemyGeneratSpots[spotNum].rotation);
     }
+
+    /// <summary>
+    /// コルーチン停止
+    /// </summary>
+    public void Stop()
+    {
+        StopCoroutine(corutine);
+    }
+
+    /// <summary>
+    /// コルーチン再開
+    /// </summary>
+    public void Restart()
+    {
+        StartCoroutine(corutine);
+    }
 }

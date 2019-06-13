@@ -513,7 +513,7 @@ MonoBehaviour:
   PauseManager: {fileID: 756705069}
   StandardEnemyPrefab: {fileID: 8137149839786746306, guid: 6a7689d519547da43af75700ea321737,
     type: 3}
-  ZigzagdEnemyPrefab: {fileID: 141670620933867857, guid: 4a2fd4eee54eb6144b9be4c006ed99a9,
+  ZigzagdEnemyPrefab: {fileID: 5059738688720222247, guid: 4a2fd4eee54eb6144b9be4c006ed99a9,
     type: 3}
 --- !u!1 &390502654
 GameObject:
@@ -5783,8 +5783,8 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.55998576, g: 0.8526038, b: 0.9811321, a: 1}
-  m_Intensity: 1.2
-  m_Range: 20
+  m_Intensity: 1
+  m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -6168,6 +6168,7 @@ MonoBehaviour:
   - {fileID: 1626979176}
   - {fileID: 1308554011}
   PausePanel: {fileID: 769533246}
+  enemyGenerator: {fileID: 338592880}
 --- !u!4 &756705071
 Transform:
   m_ObjectHideFlags: 0
@@ -7176,7 +7177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 201364342}
-  BulletPrefab: {fileID: 5332340639359938215, guid: 005eb3cfdf6d67d4d963a616bcd0432a,
+  BulletPrefab: {fileID: 5906424688882418894, guid: 005eb3cfdf6d67d4d963a616bcd0432a,
     type: 3}
   Stage: {fileID: 1362627653}
   PauseManager: {fileID: 756705069}

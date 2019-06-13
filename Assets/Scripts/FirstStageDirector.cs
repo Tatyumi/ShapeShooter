@@ -13,11 +13,6 @@ public class FirstStageDirector : MonoBehaviour
         Initialize();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     /// <summary>
     /// 初期化
     /// </summary>

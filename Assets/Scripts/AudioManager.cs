@@ -8,6 +8,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip FirstStageBGM;
     /// <summary>弾発射SE</summary>
     public AudioClip BulletSE;
+    /// <summary>破壊SE</summary>
+    public AudioClip DestroySE;
     /// <summary>ダメージSE</summary>
     public AudioClip DamageSE;
     /// <summary>プレイヤー破壊SE</summary>
@@ -33,8 +35,9 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         // SEを格納
         SEDic = new Dictionary<string, AudioClip> {
             { BulletSE.name, BulletSE},
-            { DamageSE.name, DamageSE},
+            { DestroySE.name, DestroySE},
             { PlayerDestroySE.name, PlayerDestroySE},
+            { DamageSE.name, DamageSE},
         };
 
         // BGMを格納

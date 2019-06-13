@@ -9,7 +9,7 @@ public sealed class PlayerController : MonoBehaviour
     /// <summary>破壊演出</summary>
     public ParticleSystem DestroyDirection;
     /// <summary>移動速度</summary>
-    public float MoveSpeed = 1.0f;
+    public float MoveSpeed = 1.8f;
     /// <summary>ライフカウントテキスト</summary>
     public GameObject LifeCountText;
     /// <summary>死亡フラグ</summary>

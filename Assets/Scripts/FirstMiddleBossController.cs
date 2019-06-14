@@ -16,17 +16,21 @@ public class FirstMiddleBossController : EnemyController
 
         // 初期位置に配置
         transform.localPosition = new Vector3(Stage.transform.position.x, 8.0f, 3.4f);
+
+        // 無効にする
+        enabled = false;
     }
 
-
+    /// <summary>
+    /// 移動処理
+    /// </summary>
     protected override void Move()
     {
         // 回転処理
         transform.Rotate(0, rotateSpeed, 0);
 
-        // 中ボスのフェイズであり、かつ指定の座標に達しているか
-        if (Phase.IsMiddleBoss && transform.localPosition.y >= -2.3f)
-            //if (transform.localPosition.y >= -2.3f)
+        // 座標に達しているか判別
+        if (transform.localPosition.y >= -2.3f)
         {
             //　下方向に移動
             transform.Translate(0, moveSpeed, 0);

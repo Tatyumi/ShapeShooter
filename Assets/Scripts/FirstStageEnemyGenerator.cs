@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Common;
 
@@ -176,8 +177,8 @@ public sealed class FirstStageEnemyGenerator : EnemyGenerator
         // 待機
         yield return nextPhase;
 
-        // 中ボスフェイズに移行
-        Phase.IsMiddleBoss = true;
+        // 中ボスを有効にする
+        MiddelBoss.GetComponent<FirstMiddleBossController>().enabled = true;
 
         // 終了
         yield return null;

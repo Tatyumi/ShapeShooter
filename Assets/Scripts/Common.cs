@@ -15,11 +15,4 @@
         /// <summary>ファーストステージのステージ部品の横幅</summary>
         public const float FIRST_STAGE_PART_WIDTH = 5.0f;
     }
-
-    /// <summary>進捗に関するクラス</summary>
-    public static class Phase
-    {
-        /// <summary>中ボス到達フラグ</summary>
-        public static bool IsMiddleBoss = false;
-    }
 }

@@ -25,6 +25,5 @@ public class FirstStageDirector : MonoBehaviour
 
         // フラグ初期化
         PauseManager.isPause = false;
-        Phase.IsMiddleBoss = false;
     }
 }

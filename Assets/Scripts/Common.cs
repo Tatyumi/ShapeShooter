@@ -7,6 +7,8 @@
         public const string TITLE_SCENE = "TitleScene";
         /// <summary>ファーストステージ名</summary>
         public const string FIRST_STAGE_SCENE = "FirstStageScene";
+        /// <summary>ボスシーン名</summary>
+        public const string BOSS_SCENE = "BossScene";
     }
 
     /// <summary>定数を持つクラス</summary>

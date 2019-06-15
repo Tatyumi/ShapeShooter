@@ -1,10 +1,11 @@
-﻿using Common;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FirstMiddleBossController : EnemyController
 {
     /// <summary>ステージ</summary>
     public GameObject Stage;
+    /// <summary>発光画像</summary>
+    public GameObject WhiteLightImage;
     /// <summary>回転速度</summary>
     private float rotateSpeed = 1.0f;
 
@@ -35,5 +36,14 @@ public class FirstMiddleBossController : EnemyController
             //　下方向に移動
             transform.Translate(0, moveSpeed, 0);
         }
+    }
+
+    /// <summary>
+    /// 破壊された後
+    /// </summary>
+    private void OnDestroy()
+    {
+        // 発光画像の表示を行う
+        WhiteLightImage.SetActive(true);
     }
 }

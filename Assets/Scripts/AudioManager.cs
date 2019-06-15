@@ -6,6 +6,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
 {
     /// <summary>ファーストステージのBGM</summary>
     public AudioClip FirstStageBGM;
+    /// <summary>ボスシーンのBGM</summary>
+    public AudioClip BossSceneBGM;
     /// <summary>弾発射SE</summary>
     public AudioClip BulletSE;
     /// <summary>破壊SE</summary>
@@ -43,7 +45,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         // BGMを格納
         BGMDic = new Dictionary<string, AudioClip>
         {
-            {FirstStageBGM.name,FirstStageBGM }
+            {FirstStageBGM.name,FirstStageBGM },
+            {BossSceneBGM.name,BossSceneBGM }
         };
     }
 

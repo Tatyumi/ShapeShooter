@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 398737163}
   - component: {fileID: 398737162}
   m_Layer: 5
-  m_Name: WhiteFade
+  m_Name: WhiteLightImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6278,6 +6278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirstStageBGM: {fileID: 8300000, guid: 7ae219bb59ae0694ea99fbbfca15acab, type: 3}
+  BossSceneBGM: {fileID: 8300000, guid: 537d9d2ddecf5e2409678950bcb00ff7, type: 3}
   BulletSE: {fileID: 8300000, guid: 771824a9fa1d3654386d563b8128c24e, type: 3}
   DestroySE: {fileID: 8300000, guid: 29987a26d91d3a041b09e15d228e80db, type: 3}
   DamageSE: {fileID: 8300000, guid: 271f3dc685b33d24499150678bc5920f, type: 3}
@@ -6822,6 +6823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyData: {fileID: 11400000, guid: c7f7485bc91f232489203488e8fc8f27, type: 2}
   Stage: {fileID: 1362627653}
+  WhiteLightImage: {fileID: 398737160}
 --- !u!1 &846979134
 GameObject:
   m_ObjectHideFlags: 0
@@ -7651,6 +7653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e5c3cfb55cdec4aa6df7cf244bbbab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StageBgmName: FirstStageBGM
 --- !u!4 &1308946200
 Transform:
   m_ObjectHideFlags: 0

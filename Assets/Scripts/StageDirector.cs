@@ -1,8 +1,10 @@
 ﻿using Common;
 using UnityEngine;
 
-public class FirstStageDirector : MonoBehaviour
+public class StageDirector : MonoBehaviour
 {
+    /// <summary>ステージのBGM名</summary>
+    public string StageBgmName;
     /// <summary>オーディオマネージャー</summary>
     private AudioManager audioManager;
 
@@ -21,7 +23,7 @@ public class FirstStageDirector : MonoBehaviour
         audioManager = AudioManager.Instance;
 
         // BGMの再生
-        audioManager.PlayBGM(audioManager.FirstStageBGM.name);
+        audioManager.PlayBGM(StageBgmName);
 
         // フラグ初期化
         PauseManager.isPause = false;

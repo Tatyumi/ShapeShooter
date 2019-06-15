@@ -32,6 +32,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             return;
         }
 
+        // AudioSourceコンポーネントの取得
         audioSource = gameObject.GetComponent<AudioSource>();
 
         // SEを格納
@@ -89,7 +90,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     /// </summary>
     public void StopSound()
     {
+        // 再生中の音をすべて停止する
         audioSource.Stop();
     }
-
 }

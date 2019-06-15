@@ -42,19 +42,35 @@ public class PauseManager : MonoBehaviour
         // ポーズ状態が変更されていたら、Pause/Resumeを呼び出す。
         if (prevPausing != isPause)
         {
-            if (isPause)
+            // enemyGeneratorのnukkチェック
+            if (enemyGenerator != null)
             {
-                // 中断
-                enemyGenerator.Stop();
-                Pause();
+                if (isPause)
+                {
+                    // 中断
+                    enemyGenerator.Stop();
+                    Pause();
+                }
+                else
+                {
+                    // 再開
+                    Resume();
+                    enemyGenerator.Restart();
+                }
             }
             else
             {
-                // 再開
-                Resume();
-                enemyGenerator.Restart();
+                if (isPause)
+                {
+                    // 中断
+                    Pause();
+                }
+                else
+                {
+                    // 再開
+                    Resume();
+                }
             }
-
             prevPausing = isPause;
         }
     }
@@ -119,7 +135,11 @@ public class PauseManager : MonoBehaviour
         // ポーズパネルを非表示
         PausePanel.SetActive(false);
 
-        // enemyGeneratorのコンポーネントを取得
-        enemyGenerator = enemyGenerator.GetComponent<EnemyGenerator>();
+        // enemyGeneratorのnukkチェック
+        if (enemyGenerator != null)
+        {
+            // enemyGeneratorのコンポーネントを取得
+            enemyGenerator = enemyGenerator.GetComponent<EnemyGenerator>();
+        }
     }
 }

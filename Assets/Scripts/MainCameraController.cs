@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-sealed public class MainCameraController : MonoBehaviour
+public class MainCameraController : MonoBehaviour
 {
     /// <summary>プレイヤー</summary>
     public GameObject Player;
-    /// <summary>ステージ</summary>
-    public GameObject Stage;
-    /// <summary>プレイヤーとカメラの距離</summary>
-    private Vector3 offset;
+    /// <summary>対象オブジェクト</summary>
+    public GameObject TargetObj;
     /// <summary>移動速度</summary>
-    private float moveSpeed;
+    protected float moveSpeed;
 
     private void Awake()
     {
@@ -22,19 +20,8 @@ sealed public class MainCameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // →を押した場合
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            // ステージ座標を中心に右に回転
-            transform.RotateAround(Stage.transform.position, Vector3.forward, moveSpeed);
-        }
-
-        // ←を押した場合
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            // ステージ座標を中心に左に回転
-            transform.RotateAround(Stage.transform.position, Vector3.forward, moveSpeed * -1);
-        }
+        // 移動処理
+        Move();
     }
 
     /// <summary>
@@ -44,5 +31,25 @@ sealed public class MainCameraController : MonoBehaviour
     {
         // プレイヤーの移動速度を取得
         moveSpeed = Player.GetComponent<PlayerController>().MoveSpeed;
+    }
+
+    /// <summary>
+    /// 移動処理
+    /// </summary>
+    protected virtual void Move()
+    {
+        // →を押した場合
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            // 対象オブジェクトの座標を中心に右に回転
+            transform.RotateAround(TargetObj.transform.position, Vector3.forward, moveSpeed);
+        }
+
+        // ←を押した場合
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            // 対象オブジェクトの座標を中心に左に回転
+            transform.RotateAround(TargetObj.transform.position, Vector3.forward, moveSpeed * -1);
+        }
     }
 }

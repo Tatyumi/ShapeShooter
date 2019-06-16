@@ -8,8 +8,6 @@ sealed public class BulletGenerator : MonoBehaviour
     public GameObject Player;
     /// <summary>弾</summary>
     public GameObject BulletPrefab;
-    /// <summary>ステージ</summary>
-    public GameObject Stage;
     /// <summary>ポーズマネージャー</summary>
     public GameObject PauseManager;
     /// <summary>生成間隔</summary>

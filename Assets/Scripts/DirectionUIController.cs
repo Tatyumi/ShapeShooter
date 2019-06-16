@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class SceneMoveActionUIController : MonoBehaviour
+public abstract class DirectionUIController : MonoBehaviour
 {
-    /// <summary>フェードインスピード</summary>
-    protected float fadeInSpeed = 0.002f;
+    /// <summary>フェードスピード</summary>
+    protected float fadeSpeed = 0.002f;
     /// <summary>オーディオマネージャー</summary>
     protected AudioManager audioManager;
     /// <summary>目標アルファ値</summary>
@@ -31,7 +31,7 @@ public abstract class SceneMoveActionUIController : MonoBehaviour
         {
             // アルファ値を加算しフェードインする
             ActionPanel.color = new Color(red, green, blue, alpha);
-            alpha += fadeInSpeed;
+            alpha += fadeSpeed;
 
             // 一定のアルファ値に達した場合
             if (ActionPanel.color.a >= targetAlpha)

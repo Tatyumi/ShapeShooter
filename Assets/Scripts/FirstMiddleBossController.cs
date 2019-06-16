@@ -24,7 +24,7 @@ public class FirstMiddleBossController : EnemyController
         base.Initialize();
         transform.localPosition = new Vector3(Stage.transform.position.x, 8.0f, 3.4f);
         isBattle = false;
-        //enabled = false;
+        enabled = false;
         stopPositionZ = Player.transform.localPosition.z;
     }
 

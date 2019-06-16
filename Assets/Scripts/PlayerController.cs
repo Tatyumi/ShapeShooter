@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public sealed class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    /// <summary>ステージ</summary>
-    public GameObject Stage;
+    /// <summary>対象オブジェクト</summary>
+    public GameObject TargetObj;
     /// <summary>破壊演出</summary>
     public ParticleSystem DestroyDirection;
     /// <summary>移動速度</summary>
@@ -31,19 +31,8 @@ public sealed class PlayerController : MonoBehaviour
         // 回転処理
         transform.Rotate(0, MoveSpeed, 0);
 
-        // →を押した場合
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            // ステージ座標を中心に右に回転
-            transform.RotateAround(Stage.transform.position, Vector3.forward, MoveSpeed);
-        }
-
-        // ←を押した場合
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            // ステージ座標を中心に左に回転
-            transform.RotateAround(Stage.transform.position, Vector3.forward, MoveSpeed * -1);
-        }
+        // 移動
+        Move();
     }
 
     /// <summary>
@@ -59,6 +48,26 @@ public sealed class PlayerController : MonoBehaviour
 
         // 初期化
         IsDie = false;
+    }
+
+    /// <summary>
+    /// 移動処理
+    /// </summary>
+    protected virtual void Move()
+    {
+        // →を押した場合
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            // 対象オブジェクトの座標を中心に右に回転
+            transform.RotateAround(TargetObj.transform.position, Vector3.forward, MoveSpeed);
+        }
+
+        // ←を押した場合
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            // 対象オブジェクトの座標を中心に左に回転
+            transform.RotateAround(TargetObj.transform.position, Vector3.forward, MoveSpeed * -1);
+        }
     }
 
     // 衝突処理

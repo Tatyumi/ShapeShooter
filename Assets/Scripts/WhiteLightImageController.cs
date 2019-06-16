@@ -1,7 +1,7 @@
 ﻿using UnityEngine.SceneManagement;
 using Common;
 
-public class WhiteLightImageController : SceneMoveActionUIController
+public class WhiteLightImageController : DirectionUIController
 {
     /// <summary>シーン遷移時の演出</summary>
     protected override void SceneMoveAction()

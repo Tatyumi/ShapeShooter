@@ -1,7 +1,7 @@
 ﻿using UnityEngine.SceneManagement;
 using Common;
 
-public class GameOverPanelController : SceneMoveActionUIController
+public class GameOverPanelController : DirectionUIController
 {
     /// <summary>シーン遷移時の演出</summary>
     protected override void SceneMoveAction()

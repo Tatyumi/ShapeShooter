@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-sealed public class BulletGenerator : MonoBehaviour
+public class BulletGenerator : MonoBehaviour
 {
     /// <summary>プレイヤー</summary>
     public GameObject Player;
@@ -10,14 +8,14 @@ sealed public class BulletGenerator : MonoBehaviour
     public GameObject BulletPrefab;
     /// <summary>ポーズマネージャー</summary>
     public GameObject PauseManager;
-    /// <summary>生成間隔</summary>
-    private float span　= 0.5f;
-    /// <summary>計測時間</summary>
-    private float delta　= 0.0f;
-    /// <summary>オーディオマネージャー</summary>
-    private AudioManager audioManager;
     /// <summary>弾発生座標とプレイヤーまでの距離</summary>
-    private Vector3 offset;
+    protected Vector3 offset;
+    /// <summary>オーディオマネージャー</summary>
+    protected AudioManager audioManager;
+    /// <summary>生成間隔</summary>
+    private float span = 0.5f;
+    /// <summary>計測時間</summary>
+    private float delta = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -38,17 +36,8 @@ sealed public class BulletGenerator : MonoBehaviour
             // スペースキーを押した場合
             if (Input.GetKey(KeyCode.Space))
             {
-                // SEの再生
-                audioManager.PlaySE(audioManager.BulletSE.name);
-
-                // 生成するプレファブをゲームオブジェクトに変換
-                GameObject gameObject = Instantiate(BulletPrefab) as GameObject;
-
-                // ゲームオブジェクトをPauseManagerの子にする
-                gameObject.transform.SetParent(PauseManager.transform, false);
-
-                // プレイヤーの座標から指定の距離をとった座標にゲームオブジェクトを配置
-                gameObject.transform.position = Player.transform.position + offset;
+                // 生成
+                Generat();
 
                 // 初期化
                 delta = 0.0f;
@@ -68,4 +57,21 @@ sealed public class BulletGenerator : MonoBehaviour
         offset = new Vector3(0, 0, Player.transform.localScale.z + BulletPrefab.transform.localScale.z);
     }
 
+    /// <summary>
+    /// 生成する
+    /// </summary>
+    protected virtual void Generat()
+    {
+        // SEの再生
+        audioManager.PlaySE(audioManager.BulletSE.name);
+
+        // 生成するプレファブをゲームオブジェクトに変換
+        GameObject gameObject = Instantiate(BulletPrefab) as GameObject;
+
+        // ゲームオブジェクトをPauseManagerの子にする
+        gameObject.transform.SetParent(PauseManager.transform, false);
+
+        // プレイヤーの座標から指定の距離をとった座標にゲームオブジェクトを配置
+        gameObject.transform.position = Player.transform.position + offset;
+    }
 }

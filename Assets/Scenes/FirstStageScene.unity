@@ -6745,8 +6745,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802240259}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: -2.3, z: 3.4000015}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: -1, y: 4.87, z: 3.4000015}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 756705071}
   m_RootOrder: 18
@@ -6823,6 +6823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyData: {fileID: 11400000, guid: c7f7485bc91f232489203488e8fc8f27, type: 2}
   Stage: {fileID: 1362627653}
+  Player: {fileID: 201364342}
   WhiteLightImage: {fileID: 398737160}
 --- !u!1 &846979134
 GameObject:

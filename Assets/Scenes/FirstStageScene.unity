@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31394c2944aee98429883f1a1e8e61d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Stage: {fileID: 1362627653}
+  TargetObj: {fileID: 1362627653}
   DestroyDirection: {fileID: 623443726}
   MoveSpeed: 1.3
   LifeCountText: {fileID: 1306775409}
@@ -7116,7 +7116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 201364342}
-  Stage: {fileID: 1362627653}
+  TargetObj: {fileID: 1362627653}
 --- !u!1 &999617947
 GameObject:
   m_ObjectHideFlags: 0
@@ -7335,7 +7335,6 @@ MonoBehaviour:
   Player: {fileID: 201364342}
   BulletPrefab: {fileID: 5906424688882418894, guid: 005eb3cfdf6d67d4d963a616bcd0432a,
     type: 3}
-  Stage: {fileID: 1362627653}
   PauseManager: {fileID: 756705069}
 --- !u!4 &1200876873
 Transform:

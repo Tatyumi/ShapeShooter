@@ -13,7 +13,7 @@ public class EnemyBulletGenerator : MonoBehaviour
     /// <summary>オーディオマネージャー</summary>
     protected AudioManager audioManager;
     /// <summary>生成間隔</summary>
-    private float span = 0.5f;
+    private float span = 1.0f;
     /// <summary>計測時間</summary>
     private float delta = 0.0f;
 

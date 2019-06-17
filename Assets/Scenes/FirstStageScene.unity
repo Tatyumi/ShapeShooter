@@ -6874,6 +6874,7 @@ MonoBehaviour:
   Stage: {fileID: 1362627653}
   Player: {fileID: 201364342}
   WhiteLightImage: {fileID: 398737160}
+  MiddleBossBulletGenerator: {fileID: 716784626}
   isBattle: 0
 --- !u!1 &846979134
 GameObject:

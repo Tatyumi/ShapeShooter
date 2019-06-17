@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class StageController : MonoBehaviour
 {
@@ -33,7 +31,8 @@ public class StageController : MonoBehaviour
         stage = this.transform;
 
         //ステージの中心座標を取得(ステージの上部、下部から算出)
-        Vector2 stageCenterPos = Vector2.Lerp(StageParts[(int)PartsNum.Top].transform.localPosition, StageParts[(int)PartsNum.Bottom].transform.localPosition, 0.5f);
+        Vector2 stageCenterPos = 
+            Vector2.Lerp(StageParts[(int)PartsNum.Top].transform.localPosition, StageParts[(int)PartsNum.Bottom].transform.localPosition, 0.5f);
 
         //ステージの中心座標を代入
         stage.localPosition = stageCenterPos;

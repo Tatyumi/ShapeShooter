@@ -21,12 +21,28 @@ public class FirstMiddleBossController : EnemyController
     void Start()
     {
         // 初期化
+        Initialize();
+    }
+
+    /// <summary>
+    /// 初期化処理
+    /// </summary>
+    protected override void Initialize()
+    {
+        // 初期化
         base.Initialize();
+
+        // 初期位置に配置
         transform.localPosition = new Vector3(Stage.transform.position.x, 8.0f, 3.4f);
+
+        // プレイヤーのz座標を取得
+        stopPositionZ = Player.transform.localPosition.z;
+
+        // フラグ更新
         isBattle = false;
         enabled = false;
-        stopPositionZ = Player.transform.localPosition.z;
     }
+
 
     /// <summary>
     /// 移動処理

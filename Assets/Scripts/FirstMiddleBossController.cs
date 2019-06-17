@@ -8,6 +8,8 @@ public class FirstMiddleBossController : EnemyController
     public GameObject Player;
     /// <summary>発光画像</summary>
     public GameObject WhiteLightImage;
+    /// <summary>ジェネレーター</summary>
+    public GameObject MiddleBossBulletGenerator;
     /// <summary>回転速度</summary>
     private float rotateSpeed = 1.0f;
     /// <summary>戦闘フラグ</summary>
@@ -33,7 +35,7 @@ public class FirstMiddleBossController : EnemyController
         base.Initialize();
 
         // 初期位置に配置
-        transform.localPosition = new Vector3(Stage.transform.position.x, 8.0f, 13.4f);
+        transform.localPosition = new Vector3(Stage.transform.position.x, 8.0f, 12.0f);
 
         // プレイヤーのz座標を取得
         stopPositionZ = Player.transform.localPosition.z;
@@ -42,7 +44,6 @@ public class FirstMiddleBossController : EnemyController
         isBattle = false;
         enabled = false;
     }
-
 
     /// <summary>
     /// 移動処理
@@ -84,6 +85,15 @@ public class FirstMiddleBossController : EnemyController
     /// </summary>
     private void OnDestroy()
     {
+        // nullチェック
+        if(MiddleBossBulletGenerator != null)
+        {
+            // nullでない場合
+
+            // ジェネレータを無効にする
+            MiddleBossBulletGenerator.GetComponent<FirstMibbleBossBulletGenerator>().enabled = false;
+        }
+
         // nullチェック
         if (WhiteLightImage != null)
         {

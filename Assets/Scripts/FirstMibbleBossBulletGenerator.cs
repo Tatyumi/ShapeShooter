@@ -44,7 +44,7 @@ public class FirstMibbleBossBulletGenerator : EnemyBulletGenerator
             gameObject.transform.position = MiddleBoss.transform.position;
 
             // プレイヤーの方向を向く
-            transform.LookAt(Player.transform.position);
+            gameObject.transform.LookAt(Player.transform.position);
         }
     }
 }

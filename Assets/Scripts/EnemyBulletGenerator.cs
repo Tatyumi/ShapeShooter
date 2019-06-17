@@ -65,6 +65,6 @@ public class EnemyBulletGenerator : MonoBehaviour
         gameObject.transform.SetParent(PauseManager.transform, false);
 
         // プレイヤーの方向を向く
-        transform.LookAt(Player.transform.position);
+        gameObject.transform.LookAt(Player.transform.position);
     }
 }

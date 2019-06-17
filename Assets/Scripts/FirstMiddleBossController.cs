@@ -33,7 +33,7 @@ public class FirstMiddleBossController : EnemyController
         base.Initialize();
 
         // 初期位置に配置
-        transform.localPosition = new Vector3(Stage.transform.position.x, 8.0f, 3.4f);
+        transform.localPosition = new Vector3(Stage.transform.position.x, 8.0f, 13.4f);
 
         // プレイヤーのz座標を取得
         stopPositionZ = Player.transform.localPosition.z;

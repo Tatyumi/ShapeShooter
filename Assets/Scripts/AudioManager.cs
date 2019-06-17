@@ -65,7 +65,9 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         }
 
         // BGMの再生
-        audioSource.PlayOneShot(BGMDic[BGMName]);
+        //audioSource.PlayOneShot(BGMDic[BGMName]);
+        audioSource.clip = BGMDic[BGMName] as AudioClip;
+        audioSource.Play();
     }
 
     /// <summary>

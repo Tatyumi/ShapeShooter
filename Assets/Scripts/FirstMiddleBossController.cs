@@ -84,7 +84,13 @@ public class FirstMiddleBossController : EnemyController
     /// </summary>
     private void OnDestroy()
     {
-        // 発光画像の表示を行う
-        WhiteLightImage.SetActive(true);
+        // nullチェック
+        if (WhiteLightImage != null)
+        {
+            // nullではない場合
+
+            // 発光画像の表示を行う
+            WhiteLightImage.SetActive(true);
+        }
     }
 }

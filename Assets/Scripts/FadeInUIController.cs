@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class DirectionUIController : MonoBehaviour
+public abstract class FadeInUIController : MonoBehaviour
 {
     /// <summary>フェードスピード</summary>
     protected float fadeSpeed = 0.002f;

@@ -13,7 +13,7 @@ public class BulletGenerator : MonoBehaviour
     /// <summary>オーディオマネージャー</summary>
     protected AudioManager audioManager;
     /// <summary>生成間隔</summary>
-    protected float span = 0.5f;
+    private float span = 0.5f;
     /// <summary>計測時間</summary>
     private float delta = 0.0f;
 
@@ -33,11 +33,15 @@ public class BulletGenerator : MonoBehaviour
         // 一定時間経過したか判別
         if (delta > span)
         {
-            // 生成
-            Generat();
+            // スペースキーを押した場合
+            if (Input.GetKey(KeyCode.Space))
+            {
+                // 生成
+                Generat();
 
-            // 初期化
-            delta = 0.0f;
+                // 初期化
+                delta = 0.0f;
+            }
         }
     }
 
@@ -58,20 +62,16 @@ public class BulletGenerator : MonoBehaviour
     /// </summary>
     protected virtual void Generat()
     {
-        // スペースキーを押した場合
-        if (Input.GetKey(KeyCode.Space))
-        {
-            // SEの再生
-            audioManager.PlaySE(audioManager.BulletSE.name);
+        // SEの再生
+        audioManager.PlaySE(audioManager.BulletSE.name);
 
-            // 生成するプレファブをゲームオブジェクトに変換
-            GameObject gameObject = Instantiate(BulletPrefab) as GameObject;
+        // 生成するプレファブをゲームオブジェクトに変換
+        GameObject gameObject = Instantiate(BulletPrefab) as GameObject;
 
-            // ゲームオブジェクトをPauseManagerの子にする
-            gameObject.transform.SetParent(PauseManager.transform, false);
+        // ゲームオブジェクトをPauseManagerの子にする
+        gameObject.transform.SetParent(PauseManager.transform, false);
 
-            // プレイヤーの座標から指定の距離をとった座標にゲームオブジェクトを配置
-            gameObject.transform.position = Player.transform.position + offset;
-        }
+        // プレイヤーの座標から指定の距離をとった座標にゲームオブジェクトを配置
+        gameObject.transform.position = Player.transform.position + offset;
     }
 }

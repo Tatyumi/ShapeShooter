@@ -19,9 +19,6 @@ public sealed class BossSceneBulletGenerator : BulletGenerator
     /// </summary>
     protected override void Generat()
     {
-        // スペースキーを押した場合
-        if (Input.GetKey(KeyCode.Space))
-        {
             // SEの再生
             audioManager.PlaySE(audioManager.BulletSE.name);
 
@@ -36,6 +33,5 @@ public sealed class BossSceneBulletGenerator : BulletGenerator
 
             // ゲームオブジェクトの向きをボス方向に指定する
             gameObject.transform.LookAt(Boss.transform.position);
-        }
     }
 }

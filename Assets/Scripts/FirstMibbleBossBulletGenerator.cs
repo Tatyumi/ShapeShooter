@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirstMibbleBossBulletGenerator : BulletGenerator
+public class FirstMibbleBossBulletGenerator : EnemyBulletGenerator
 {
+    /// <summary>中ボス</summary>
+    public GameObject MiddleBoss;
+    /// <summary>初期ステージのボスコントローラー</summary>
+    private FirstMiddleBossController firstMiddle;
+
     /// <summary>
     /// 初期化
     /// </summary>
@@ -12,8 +17,8 @@ public class FirstMibbleBossBulletGenerator : BulletGenerator
         // オーディオマネージャーの取得
         audioManager = AudioManager.Instance;
 
-        // 生成間隔を初期化
-        span = 1.0f;
+        // コンポネントの取得
+        firstMiddle = MiddleBoss.GetComponent<FirstMiddleBossController>();
     }
 
     /// <summary>
@@ -21,16 +26,25 @@ public class FirstMibbleBossBulletGenerator : BulletGenerator
     /// </summary>
     protected override void Generat()
     {
-        // SEの再生
-        audioManager.PlaySE(audioManager.BulletSE.name);
+        // フラグチェック
+        if (firstMiddle.isBattle)
+        {
+            // trueの場合
 
-        // 生成するプレファブをゲームオブジェクトに変換
-        GameObject gameObject = Instantiate(BulletPrefab) as GameObject;
+            // SEの再生
+            audioManager.PlaySE(audioManager.BulletSE.name);
 
-        // ゲームオブジェクトをPauseManagerの子にする
-        gameObject.transform.SetParent(PauseManager.transform, false);
+            // 生成するプレファブをゲームオブジェクトに変換
+            GameObject gameObject = Instantiate(BulletPrefab) as GameObject;
 
-        // プレイヤーの方向を向く
-        transform.LookAt(Player.transform.position);
+            // ゲームオブジェクトをPauseManagerの子にする
+            gameObject.transform.SetParent(PauseManager.transform, false);
+
+            // 中ボスの座標に配置する
+            gameObject.transform.position = MiddleBoss.transform.position;
+
+            // プレイヤーの方向を向く
+            transform.LookAt(Player.transform.position);
+        }
     }
 }

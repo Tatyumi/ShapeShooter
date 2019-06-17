@@ -28,6 +28,10 @@ public sealed class BulletController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 衝突処理
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
         // 衝突したオブジェクトのEnemyControllerコンポーネントを取得

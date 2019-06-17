@@ -6,17 +6,22 @@ public sealed class BulletController : MonoBehaviour
     public GameObject BulletLight;
     /// <summary>弾速</summary>
     private float speed = 1.0f;
-    /// <summary>オブジェクトを破棄するZ座標</summary>
-    private const float destroyPositionZ = 110.0f;
+    /// <summary>破棄時間</summary>
+    private float deletTime = 4.0f;
+    /// <summary>計測時間</summary>
+    private float delta = 0.0f;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        // 時間計測
+        delta += Time.deltaTime;
+
         // 奥に移動
         transform.Translate(0, 0, speed);
 
-        // 一定の距離に達する
-        if (transform.localPosition.z > destroyPositionZ)
+        // 計測時間が破棄時間に達した場合
+        if (delta > deletTime)
         {
             // 破棄
             Destroy(gameObject);

@@ -6177,6 +6177,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712684477}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &716784626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 716784627}
+  - component: {fileID: 716784628}
+  m_Layer: 0
+  m_Name: MiddelBossBulletGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &716784627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716784626}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.013829231, y: -15.352462, z: -11.004179}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 756705071}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &716784628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716784626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd819cc4f4a1f5c41b411e6888b3a74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 201364342}
+  BulletPrefab: {fileID: 5419445389126511686, guid: 4641dd0d19e40f44ba21997c797a5acc,
+    type: 3}
+  PauseManager: {fileID: 756705069}
+  MiddleBoss: {fileID: 802240259}
 --- !u!1 &756705069
 GameObject:
   m_ObjectHideFlags: 0
@@ -6243,6 +6291,7 @@ Transform:
   - {fileID: 1989272672}
   - {fileID: 1308946200}
   - {fileID: 338592879}
+  - {fileID: 716784627}
   - {fileID: 802240260}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -6745,11 +6794,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802240259}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 4.87, z: 3.4000015}
+  m_LocalPosition: {x: -1, y: 1.8, z: 14.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 756705071}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &802240261
 BoxCollider:
@@ -6825,6 +6874,7 @@ MonoBehaviour:
   Stage: {fileID: 1362627653}
   Player: {fileID: 201364342}
   WhiteLightImage: {fileID: 398737160}
+  isBattle: 0
 --- !u!1 &846979134
 GameObject:
   m_ObjectHideFlags: 0

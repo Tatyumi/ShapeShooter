@@ -27,7 +27,7 @@ public class MainCameraController : MonoBehaviour
     /// <summary>
     /// 初期化
     /// </summary>
-    private void Initialize()
+    protected virtual void Initialize()
     {
         // プレイヤーの移動速度を取得
         moveSpeed = Player.GetComponent<PlayerController>().MoveSpeed;

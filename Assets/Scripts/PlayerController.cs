@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// 初期化
     /// </summary>
-    private void Initialize()
+    protected virtual void Initialize()
     {
         // 音楽データの取得
         audioManager = AudioManager.Instance;

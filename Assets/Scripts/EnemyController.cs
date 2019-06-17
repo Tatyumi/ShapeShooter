@@ -34,7 +34,7 @@ public class EnemyController : MonoBehaviour
     /// <summary>
     /// 初期化
     /// </summary>
-    protected void Initialize()
+    protected virtual void Initialize()
     {
         // 音楽データの取得
         audioManager = AudioManager.Instance;

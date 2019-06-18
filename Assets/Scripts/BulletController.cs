@@ -6,8 +6,8 @@ public sealed class BulletController : MonoBehaviour
     public GameObject BulletLight;
     /// <summary>弾速</summary>
     private float speed = 1.0f;
-    /// <summary>破棄時間</summary>
-    private float deletTime = 4.0f;
+    /// <summary>生存時間</summary>
+    private float lifeTime = 4.0f;
     /// <summary>計測時間</summary>
     private float delta = 0.0f;
 
@@ -21,7 +21,7 @@ public sealed class BulletController : MonoBehaviour
         transform.Translate(0, 0, speed);
 
         // 計測時間が破棄時間に達した場合
-        if (delta > deletTime)
+        if (delta > lifeTime)
         {
             // 破棄
             Destroy(gameObject);

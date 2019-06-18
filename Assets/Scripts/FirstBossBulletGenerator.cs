@@ -17,7 +17,7 @@ public class FirstBossBulletGenerator : EnemyBulletGenerator
     protected override void Generat()
     {
         // SEの再生
-        audioManager.PlaySE(audioManager.BulletSE.name);
+        audioManager.PlaySE(audioManager.BossBulletSE.name);
 
         // 生成オブジェクト格納配列
         GameObject[] gameObject = new GameObject[generatCount];

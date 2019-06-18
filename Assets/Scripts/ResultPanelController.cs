@@ -80,7 +80,7 @@ public sealed class ResultPanelController : MonoBehaviour
         gameObject.SetActive(true);
 
         // 待機時間
-        var wait = new WaitForSeconds(1);
+        var wait = new WaitForSeconds(1.5f);
 
         // クリアメッセージの表示
         ClearMessage.SetActive(true);

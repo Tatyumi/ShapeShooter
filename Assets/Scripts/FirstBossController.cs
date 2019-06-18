@@ -26,14 +26,16 @@ public class FirstBossController : EnemyController
         // 体力を1減らす 
         hp -= 1;
 
-        // 体力が0以下の場合
+        // hpチェック
         if (hp <= 0)
         {
-            // パーティクルシステムを再生
-            DestroyDirection.Play();
+            // hpが0以下の場合
 
             // ボスの位置にパーティクルシステムを配置
             DestroyDirection.transform.localPosition = transform.localPosition;
+
+            // パーティクルシステムを再生
+            DestroyDirection.Play();
 
             // 破壊SE再生
             audioManager.PlaySE(audioManager.DestroySE.name);
@@ -56,7 +58,7 @@ public class FirstBossController : EnemyController
         }
         else
         {
-            // 体力が残っている場合
+            // hpが1以上の場合
 
             // ダメージSEを再生
             audioManager.PlaySE(audioManager.DamageSE.name);

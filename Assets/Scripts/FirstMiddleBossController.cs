@@ -79,28 +79,52 @@ public class FirstMiddleBossController : EnemyController
         }
 
     }
-
     /// <summary>
-    /// 破壊された後
+    /// ダメージを適用する
     /// </summary>
-    private void OnDestroy()
+    public override void ApplyDamage()
     {
-        // nullチェック
-        if(MiddleBossBulletGenerator != null)
-        {
-            // nullでない場合
+        // hpを1減らす 
+        hp -= 1;
 
-            // ジェネレータを無効にする
-            MiddleBossBulletGenerator.GetComponent<FirstMibbleBossBulletGenerator>().enabled = false;
+        // hpチェック
+        if (hp <= 0)
+        {
+            // hpが0以下の場合
+
+            // 破壊SE再生
+            audioManager.PlaySE(audioManager.DestroySE.name);
+
+            // スコア加算
+            ScoreController.AddScore(EnemyData.Score);
+
+            // nullチェック
+            if (MiddleBossBulletGenerator != null)
+            {
+                // nullでない場合
+
+                // ジェネレータを無効にする
+                MiddleBossBulletGenerator.GetComponent<FirstMibbleBossBulletGenerator>().enabled = false;
+            }
+
+            // nullチェック
+            if (WhiteLightImage != null)
+            {
+                // nullではない場合
+
+                // 発光画像の表示を行う
+                WhiteLightImage.SetActive(true);
+            }
+
+            // 破棄する
+            Destroy(gameObject);
         }
-
-        // nullチェック
-        if (WhiteLightImage != null)
+        else
         {
-            // nullではない場合
+            // hpが1以上の場合
 
-            // 発光画像の表示を行う
-            WhiteLightImage.SetActive(true);
+            // ダメージSEを再生
+            audioManager.PlaySE(audioManager.DamageSE.name);
         }
     }
 }

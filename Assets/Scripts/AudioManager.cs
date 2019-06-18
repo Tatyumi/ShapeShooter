@@ -16,6 +16,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip DamageSE;
     /// <summary>プレイヤー破壊SE</summary>
     public AudioClip PlayerDestroySE;
+    /// <summary>ダメージ無効SE</summary>
+    public AudioClip NoDamageSE;
     /// <summary>オーディオソース</summary>
     AudioSource audioSource;
     /// <summary>全SE保持ディクショナリ</summary>
@@ -41,6 +43,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { DestroySE.name, DestroySE},
             { PlayerDestroySE.name, PlayerDestroySE},
             { DamageSE.name, DamageSE},
+            { NoDamageSE.name, NoDamageSE},
         };
 
         // BGMを格納

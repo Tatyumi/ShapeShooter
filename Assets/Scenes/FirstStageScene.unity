@@ -6332,6 +6332,7 @@ MonoBehaviour:
   DestroySE: {fileID: 8300000, guid: 29987a26d91d3a041b09e15d228e80db, type: 3}
   DamageSE: {fileID: 8300000, guid: 271f3dc685b33d24499150678bc5920f, type: 3}
   PlayerDestroySE: {fileID: 8300000, guid: 0073765030e11ed46bfbaa1c25b0ccf6, type: 3}
+  NoDamageSE: {fileID: 8300000, guid: cf832dce6f372964294b1cf16960a5ef, type: 3}
 --- !u!4 &764789449
 Transform:
   m_ObjectHideFlags: 0

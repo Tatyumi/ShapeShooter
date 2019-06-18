@@ -2939,6 +2939,7 @@ MonoBehaviour:
   DestroySE: {fileID: 8300000, guid: 29987a26d91d3a041b09e15d228e80db, type: 3}
   DamageSE: {fileID: 8300000, guid: 271f3dc685b33d24499150678bc5920f, type: 3}
   PlayerDestroySE: {fileID: 8300000, guid: 0073765030e11ed46bfbaa1c25b0ccf6, type: 3}
+  NoDamageSE: {fileID: 8300000, guid: cf832dce6f372964294b1cf16960a5ef, type: 3}
 --- !u!4 &951187367
 Transform:
   m_ObjectHideFlags: 0
@@ -3797,6 +3798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1268084724}
+  - component: {fileID: 1268084725}
   m_Layer: 0
   m_Name: BossBulletGenerator
   m_TagString: Untagged
@@ -3812,12 +3814,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268084723}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.519676, y: 2.933664, z: 9.873699}
+  m_LocalPosition: {x: -1, y: -2.3, z: 19.600002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1310847483}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1268084725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268084723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f30d0dbcaa25243ac1d74834155505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 972244786}
+  BulletPrefab: {fileID: 2156221150503383861, guid: 12429c3692718a6409cc544aa88ec201,
+    type: 3}
+  PauseManager: {fileID: 1310847482}
+  Boss: {fileID: 1541715950}
 --- !u!1 &1310847482
 GameObject:
   m_ObjectHideFlags: 0
@@ -3855,8 +3874,8 @@ Transform:
   - {fileID: 1585284296}
   - {fileID: 1594760462}
   - {fileID: 1861518366}
-  - {fileID: 1541715951}
   - {fileID: 1268084724}
+  - {fileID: 1541715951}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4751,7 +4770,7 @@ Transform:
   m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children: []
   m_Father: {fileID: 1310847483}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1541715953
 BoxCollider:

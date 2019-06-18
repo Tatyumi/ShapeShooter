@@ -6,12 +6,20 @@ public class EnemyBulletController : MonoBehaviour
 {
     /// <summary>弾が発する光</summary>
     public GameObject BulletLight;
+    /// <summary>オーディオマネージャー</summary>
+    protected AudioManager audioManager;
     /// <summary>弾速</summary>
     private float speed = 0.2f;
     /// <summary>生存時間</summary>
     private float lifeTime = 3.0f;
     /// <summary>計測時間</summary>
     private float delta = 0.0f;
+
+    void Awake()
+    {
+        // 全音楽データの取得
+        audioManager = AudioManager.Instance;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -31,11 +39,13 @@ public class EnemyBulletController : MonoBehaviour
     }
 
     /// <summary>
-    /// 衝突処理
+    /// 弾衝突処理
     /// </summary>
-    /// <param name="collision"></param>
-    private void OnCollisionEnter(Collision collision)
+    public virtual void ConflictBullet()
     {
+        // SEの再生
+        audioManager.PlaySE(audioManager.DestroySE.name);
+
         // 破棄
         Destroy(gameObject);
     }

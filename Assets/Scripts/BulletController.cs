@@ -35,13 +35,32 @@ public sealed class BulletController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // 衝突したオブジェクトのEnemyControllerコンポーネントを取得
-        var obj = collision.gameObject.GetComponent<EnemyController>();
+        var enemy = collision.gameObject.GetComponent<EnemyController>();
 
-        // 存在チェック
-        if (obj != null)
+        // nullチェック
+        if (enemy != null)
         {
+            // nullではない場合
+
             // ダメージ適用処理
-            obj.ApplyDamage();
+            enemy.ApplyDamage();
+        }
+        else
+        {
+            // nullの場合
+
+            // 衝突したオブジェクトのEnemyControllerコンポーネントを取得
+            var enemyBullet = collision.gameObject.GetComponent<EnemyBulletController>();
+
+            // nullチェック
+            if(enemyBullet != null)
+            {
+                // nullではない場合
+
+                // 弾衝突処理
+                enemyBullet.ConflictBullet();
+
+            }
         }
 
         // パーティクルシステムを起動

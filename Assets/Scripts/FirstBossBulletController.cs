@@ -5,9 +5,9 @@ public class FirstBossBulletController : EnemyBulletController
     /// <summary>
     /// 衝突処理
     /// </summary>
-    /// <param name="collision">衝突したオブジェクトのコリジョン</param>
-    protected override void OnCollisionEnter(Collision collision)
+    public override void ConflictBullet()
     {
-        // 破棄されない
+        // ダメージ無効SEの再生
+        audioManager.PlaySE(audioManager.NoDamageSE.name);
     }
 }

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a46baf8dfb7f94183a19508b2c8188, type: 3}
   m_Name: FirstBoss
   m_EditorClassIdentifier: 
-  Hp: 50
+  Hp: 25
   Score: 5000
   MoveSpeed: 1

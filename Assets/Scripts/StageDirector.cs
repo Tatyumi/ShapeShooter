@@ -6,7 +6,7 @@ public class StageDirector : MonoBehaviour
     /// <summary>ステージのBGM名</summary>
     public string StageBgmName;
     /// <summary>オーディオマネージャー</summary>
-    private AudioManager audioManager;
+    protected AudioManager audioManager;
 
     private void Awake()
     {
@@ -17,7 +17,7 @@ public class StageDirector : MonoBehaviour
     /// <summary>
     /// 初期化
     /// </summary>
-    private void Initialize()
+    protected virtual void Initialize()
     {
         // 音楽データの取得
         audioManager = AudioManager.Instance;
@@ -27,5 +27,8 @@ public class StageDirector : MonoBehaviour
 
         // フラグ初期化
         PauseManager.isPause = false;
+
+        // シーン開始時に敵キャラ破壊数を初期化
+        ResultPanelController.TempEnemyKillCount = 0;
     }
 }

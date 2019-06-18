@@ -20115,7 +20115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1861518366}
-  - component: {fileID: 1861518368}
+  - component: {fileID: 1861518367}
   m_Layer: 0
   m_Name: BossStageDirector
   m_TagString: Untagged
@@ -20137,7 +20137,7 @@ Transform:
   m_Father: {fileID: 1310847483}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1861518368
+--- !u!114 &1861518367
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20146,7 +20146,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1861518365}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84e5c3cfb55cdec4aa6df7cf244bbbab, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b154b3d5f1cf3d49a9c1d82f1e87afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   StageBgmName: BossBGM

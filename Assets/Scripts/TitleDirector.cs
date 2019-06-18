@@ -42,6 +42,9 @@ public class TitleDirector : MonoBehaviour
         // スコアの初期化
         ScoreController.score = 0;
 
+        // 破壊した敵キャラの数を初期化
+        ResultPanelController.EnemyKillCount = 0;
+
         // TODO BGMの再生
     }
 }

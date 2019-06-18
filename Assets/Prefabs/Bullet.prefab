@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 8418861504951637934}
   - component: {fileID: 5038923532197231564}
   m_Layer: 0
-  m_Name: Bullet_
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletLight: {fileID: 583496294705315651}
+  BulletData: {fileID: 11400000, guid: fcde04b4260f48f4a96c16f646b40bed, type: 2}
 --- !u!54 &5038923532197231564
 Rigidbody:
   m_ObjectHideFlags: 0

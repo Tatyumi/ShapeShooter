@@ -197,3 +197,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletLight: {fileID: 1173617683975994403}
+  EnemyBulletData: {fileID: 11400000, guid: 45b279bbb12c14442bf5a7c20c04418a, type: 2}

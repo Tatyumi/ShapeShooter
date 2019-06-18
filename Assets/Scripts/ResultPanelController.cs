@@ -22,7 +22,6 @@ public sealed class ResultPanelController : MonoBehaviour
     /// <summary>リザルトフラグ</summary>
     private bool isResult;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -97,6 +96,8 @@ public sealed class ResultPanelController : MonoBehaviour
         KillEnemyCountText.GetComponent<Text>().text = TempEnemyKillCount.ToString();
         // 殺した敵キャラの数を表示
         KillEnemyCountText.SetActive(true);
+        // クリアしたステージでの敵キャラ破壊数を取得する
+        EnemyKillCount += TempEnemyKillCount;
         // 待機
         yield return wait;
 

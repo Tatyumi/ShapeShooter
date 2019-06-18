@@ -6,12 +6,10 @@ public class EnemyBulletController : MonoBehaviour
 {
     /// <summary>弾が発する光</summary>
     public GameObject BulletLight;
+    /// <summary>敵の弾情報</summary>
+    public BulletData EnemyBulletData;
     /// <summary>オーディオマネージャー</summary>
     protected AudioManager audioManager;
-    /// <summary>弾速</summary>
-    private float speed = 0.2f;
-    /// <summary>生存時間</summary>
-    private float lifeTime = 3.0f;
     /// <summary>計測時間</summary>
     private float delta = 0.0f;
 
@@ -28,10 +26,10 @@ public class EnemyBulletController : MonoBehaviour
         delta += Time.deltaTime;
 
         // 奥に移動
-        transform.Translate(0, 0, speed);
+        transform.Translate(0, 0, EnemyBulletData.Speed);
 
         // 計測時間が破棄時間に達した場合
-        if (delta > lifeTime)
+        if (delta > EnemyBulletData.LifeTime)
         {
             // 破棄
             Destroy(gameObject);

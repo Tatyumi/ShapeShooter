@@ -91,9 +91,7 @@ public sealed class LifeCountTextController : MonoBehaviour
         // 音楽の停止
         audioManager.StopSound();
 
-        // TODO 進捗に合わせて再読み込みを行うようにする
         // 現在のシーンを再読み込み
-        SceneManager.LoadScene(SceneName.FIRST_STAGE_SCENE);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
 }

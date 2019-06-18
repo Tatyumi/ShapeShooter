@@ -71,7 +71,8 @@ public sealed class ResultPanelController : MonoBehaviour
     /// <returns></returns>
     public IEnumerator StartResult()
     {
-        // TODO ResultBGMの再生
+        // 効果音の再生
+        audioManager.PlaySE(audioManager.ResultSE.name);
 
         // ポーズ状態にして、操作負荷にする
         PauseManager.isPause = true;

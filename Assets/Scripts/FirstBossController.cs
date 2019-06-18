@@ -8,6 +8,8 @@ public class FirstBossController : EnemyController
     public ParticleSystem DestroyDirection;
     /// <summary>ジェネレーター</summary>
     public EnemyBulletGenerator EnemyBulletGenerator;
+    /// <summary>リザルトパネル</summary>
+    public GameObject ResultPanel;
 
     /// <summary>
     /// 移動処理
@@ -52,9 +54,13 @@ public class FirstBossController : EnemyController
                 EnemyBulletGenerator.GetComponent<EnemyBulletGenerator>().enabled = false;
             }
 
+            // リザルトパネルを表示する
+            ResultPanel.SetActive(true);
+
             // オブジェクトを無効にする
             enabled = false;
             gameObject.SetActive(false);
+
         }
         else
         {

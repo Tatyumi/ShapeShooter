@@ -33,6 +33,9 @@ public class FirstBossController : EnemyController
         {
             // hpが0以下の場合
 
+            // 音楽の停止
+            audioManager.StopSound();
+
             // ボスの位置にパーティクルシステムを配置
             DestroyDirection.transform.localPosition = transform.localPosition;
 

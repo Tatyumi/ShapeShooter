@@ -135,7 +135,7 @@ public class PauseManager : MonoBehaviour
         // ポーズパネルを非表示
         PausePanel.SetActive(false);
 
-        // enemyGeneratorのnukkチェック
+        // enemyGeneratorのnullチェック
         if (enemyGenerator != null)
         {
             // enemyGeneratorのコンポーネントを取得

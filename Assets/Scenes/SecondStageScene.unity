@@ -589,7 +589,7 @@ MonoBehaviour:
   PauseManager: {fileID: 665839533}
   StandardEnemyPrefab: {fileID: 8137149839786746306, guid: 6a7689d519547da43af75700ea321737,
     type: 3}
-  ZigzagdEnemyPrefab: {fileID: 5059738688720222247, guid: 4a2fd4eee54eb6144b9be4c006ed99a9,
+  ZigzagdEnemyPrefab: {fileID: 4858811514773409787, guid: 4a2fd4eee54eb6144b9be4c006ed99a9,
     type: 3}
   MiddelBoss: {fileID: 1138330448}
 --- !u!1 &248800093
@@ -5717,7 +5717,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 1689667242}
   PausePanel: {fileID: 916739838}
-  enemyGenerator: {fileID: 0}
+  enemyGenerator: {fileID: 232927788}
 --- !u!1 &680662047
 GameObject:
   m_ObjectHideFlags: 0

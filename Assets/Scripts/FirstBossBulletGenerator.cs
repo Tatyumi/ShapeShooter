@@ -7,9 +7,9 @@ public class FirstBossBulletGenerator : EnemyBulletGenerator
     /// <summary>ボス</summary>
     public GameObject Boss;
     /// <summary>生成数</summary>
-    private int generatCount = 3;
+    private int generatCount = 5;
     /// <summary>サブ弾の進行方向</summary>
-    private Vector3 subBulletVec = new Vector3(3,0,0); 
+    private Vector3 subBulletVec = new Vector3(7, 0, 0);
 
     /// <summary>
     /// 生成する
@@ -23,7 +23,7 @@ public class FirstBossBulletGenerator : EnemyBulletGenerator
         GameObject[] gameObject = new GameObject[generatCount];
 
         // 生成数だけオブジェクトを生成
-        for(int i = 0; i < generatCount; i++)
+        for (int i = 0; i < generatCount; i++)
         {
             // ゲームオブジェクトを格納
             gameObject[i] = Instantiate(BulletPrefab) as GameObject;
@@ -38,10 +38,11 @@ public class FirstBossBulletGenerator : EnemyBulletGenerator
         // プレイヤーの方向を向く
         gameObject[0].transform.LookAt(Player.transform.position);
 
-        var subBulletLeft = Player.transform.position + subBulletVec;
-        gameObject[1].transform.LookAt(subBulletLeft);
-
-        var subBulletRight = Player.transform.position - subBulletVec;
-        gameObject[2].transform.LookAt(subBulletRight);
+        // プレイヤーのZ座標からずれた方向を向く
+        for (int i = 1; i < generatCount - 1; i += 2)
+        {
+            gameObject[i].transform.LookAt(Player.transform.position + (subBulletVec * (i * 2)));
+            gameObject[i + 1].transform.LookAt(Player.transform.position - (subBulletVec * (i * 2)));
+        }
     }
 }

@@ -3021,6 +3021,7 @@ MonoBehaviour:
   NoDamageSE: {fileID: 8300000, guid: cf832dce6f372964294b1cf16960a5ef, type: 3}
   ResultSE: {fileID: 8300000, guid: c2836882ad748664e9d60de6c56ce386, type: 3}
   BossBulletSE: {fileID: 8300000, guid: c2e89be92f4ef234185aecd2d9fcbbb7, type: 3}
+  TextOnSE: {fileID: 8300000, guid: 07398e83e9e8e6d4589d106b7f1d5de5, type: 3}
 --- !u!4 &951187367
 Transform:
   m_ObjectHideFlags: 0

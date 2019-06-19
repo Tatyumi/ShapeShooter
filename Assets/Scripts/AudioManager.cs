@@ -6,6 +6,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
 {
     /// <summary>ファーストステージのBGM</summary>
     public AudioClip FirstStageBGM;
+    /// <summary>セカンドステージのBGM[</summary>
+    public AudioClip SecondStageBGM;
     /// <summary>ボスシーンのBGM</summary>
     public AudioClip BossSceneBGM;
     /// <summary>弾発射SE</summary>
@@ -59,7 +61,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         BGMDic = new Dictionary<string, AudioClip>
         {
             {FirstStageBGM.name,FirstStageBGM },
-            {BossSceneBGM.name,BossSceneBGM }
+            {SecondStageBGM.name,SecondStageBGM },
+            {BossSceneBGM.name,BossSceneBGM },
         };
     }
 
@@ -77,7 +80,6 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         }
 
         // BGMの再生
-        //audioSource.PlayOneShot(BGMDic[BGMName]);
         audioSource.clip = BGMDic[BGMName] as AudioClip;
         audioSource.Play();
     }

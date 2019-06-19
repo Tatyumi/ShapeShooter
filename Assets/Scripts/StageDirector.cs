@@ -25,6 +25,7 @@ public class StageDirector : MonoBehaviour
         // BGMの再生
         audioManager.PlayBGM(StageBgmName);
 
+
         // フラグ初期化
         PauseManager.isPause = false;
 

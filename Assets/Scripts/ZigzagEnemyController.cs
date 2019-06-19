@@ -3,30 +3,28 @@ using UnityEngine;
 
 public sealed class ZigzagEnemyController : EnemyController
 {
-    /// <summary>最小x座標</summary>
-    private float minPosX;
-    /// <summary>最大x座標</summary>
-    private float maxPosX;
     /// <summary>左右に動く速度</summary>
     private float zigzagSpeed = 0.1f;
+    /// <summary>中心座標</summary>
+    private Vector2 oPos;
+    /// <summary>面積</summary>
+    private float area;
 
     private void Start()
     {
         // 初期化
         base.Initialize();
 
+
+        // TODO ステージの横幅の求め方
         // ステージの横幅(半分)を取得
-        var stageHalfWidth = Constans.FIRST_STAGE_PART_WIDTH / 2;
+        var radius = 7 / 2;
 
-        // 可動範囲
-        var moveRange = stageHalfWidth - transform.localScale.x;
+        // 中心座標取得
+        oPos = transform.position;
 
-        // ラジアン
-        var radian = transform.localRotation.z * Mathf.Deg2Rad;
-
-        // 角度を考慮した最小、最大x座標を取得
-        minPosX = transform.position.x - (moveRange * Mathf.Cos(radian));
-        maxPosX = transform.position.x + (moveRange * Mathf.Cos(radian));
+        // 面積を算出
+        area = radius * radius;
     }
 
     /// <summary>
@@ -37,9 +35,15 @@ public sealed class ZigzagEnemyController : EnemyController
         // 移動
         transform.Translate(zigzagSpeed, 0, moveSpeed);
 
-        // 最大または最小のx座標に達した場合
-        if (transform.localPosition.x > maxPosX || transform.localPosition.x < minPosX)
+        // 中心座標から現在の座標の距離を取得
+        var pointPos = (transform.position.x - oPos.x) * (transform.position.x - oPos.x)
+            + (transform.position.y - oPos.y) * (transform.position.y - oPos.y);
+
+        // 面積外の座標か判別
+        if(pointPos > area)
         {
+            // 面積外の場合
+
             // 動きを反転させる
             zigzagSpeed *= -1;
         }

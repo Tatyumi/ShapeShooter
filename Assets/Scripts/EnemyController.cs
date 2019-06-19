@@ -49,7 +49,7 @@ public class EnemyController : MonoBehaviour
     /// <summary>
     /// ダメージを適用する
     /// </summary>
-    public virtual void ApplyDamage()
+    public virtual bool ApplyDamage()
     {
         // 体力を1減らす 
         hp -= 1;
@@ -65,6 +65,7 @@ public class EnemyController : MonoBehaviour
 
             // 破棄する
             Destroy(gameObject);
+            return true;
         }
         else
         {
@@ -72,6 +73,7 @@ public class EnemyController : MonoBehaviour
 
             // ダメージSEを再生
             audioManager.PlaySE(audioManager.DamageSE.name);
+            return false;
         }
     }
 

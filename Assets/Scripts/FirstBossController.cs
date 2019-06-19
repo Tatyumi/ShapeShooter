@@ -23,7 +23,7 @@ public class FirstBossController : EnemyController
     /// <summary>
     /// ダメージを適用する
     /// </summary>
-    public override void ApplyDamage()
+    public override bool ApplyDamage()
     {
         // 体力を1減らす 
         hp -= 1;
@@ -63,6 +63,7 @@ public class FirstBossController : EnemyController
             // オブジェクトを無効にする
             enabled = false;
             gameObject.SetActive(false);
+            return true;
 
         }
         else
@@ -71,6 +72,8 @@ public class FirstBossController : EnemyController
 
             // ダメージSEを再生
             audioManager.PlaySE(audioManager.DamageSE.name);
+
+            return false;
         }
     }
 }

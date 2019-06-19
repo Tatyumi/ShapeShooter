@@ -82,7 +82,7 @@ public class FirstMiddleBossController : EnemyController
     /// <summary>
     /// ダメージを適用する
     /// </summary>
-    public override void ApplyDamage()
+    public override bool ApplyDamage()
     {
         // hpを1減らす 
         hp -= 1;
@@ -118,6 +118,8 @@ public class FirstMiddleBossController : EnemyController
 
             // 破棄する
             Destroy(gameObject);
+
+            return true;
         }
         else
         {
@@ -125,6 +127,7 @@ public class FirstMiddleBossController : EnemyController
 
             // ダメージSEを再生
             audioManager.PlaySE(audioManager.DamageSE.name);
+            return false;
         }
     }
 }

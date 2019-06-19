@@ -40,8 +40,14 @@ public sealed class BulletController : MonoBehaviour
         {
             // nullではない場合
 
-            // ダメージ適用処理
-            enemy.ApplyDamage();
+            // ダメージを与えて敵キャラを破壊した場合
+            if (enemy.ApplyDamage())
+            {
+                // 加算する
+                ResultPanelController.TempEnemyKillCount++;
+
+                Debug.Log(ResultPanelController.TempEnemyKillCount);
+            }
         }
         else
         {

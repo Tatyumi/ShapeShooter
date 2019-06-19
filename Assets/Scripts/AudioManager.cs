@@ -22,6 +22,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip ResultSE;
     /// <summary>ボスの弾発射SE</summary>
     public AudioClip BossBulletSE;
+    /// <summary>テキスト表示SE</summary>
+    public AudioClip TextOnSE;
     /// <summary>オーディオソース</summary>
     AudioSource audioSource;
     /// <summary>全SE保持ディクショナリ</summary>
@@ -50,6 +52,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { NoDamageSE.name, NoDamageSE},
             { ResultSE.name, ResultSE},
             { BossBulletSE.name, BossBulletSE},
+            { TextOnSE.name, TextOnSE},
         };
 
         // BGMを格納

@@ -89,6 +89,8 @@ public sealed class ResultPanelController : MonoBehaviour
 
         // 殺した敵キャラテキストの表示
         KillEnemyText.SetActive(true);
+        // テキスト表示SE再生
+        audioManager.PlaySE(audioManager.TextOnSE.name);
         // 待機
         yield return wait;
 
@@ -96,6 +98,8 @@ public sealed class ResultPanelController : MonoBehaviour
         KillEnemyCountText.GetComponent<Text>().text = TempEnemyKillCount.ToString();
         // 殺した敵キャラの数を表示
         KillEnemyCountText.SetActive(true);
+        // テキスト表示SE再生
+        audioManager.PlaySE(audioManager.TextOnSE.name);
         // クリアしたステージでの敵キャラ破壊数を取得する
         EnemyKillCount += TempEnemyKillCount;
         // 待機
@@ -103,6 +107,8 @@ public sealed class ResultPanelController : MonoBehaviour
 
         // ガイドテキストの表示
         GuideMessage.SetActive(true);
+        // テキスト表示SE再生
+        audioManager.PlaySE(audioManager.TextOnSE.name);
         // 待機
         yield return wait;
     }

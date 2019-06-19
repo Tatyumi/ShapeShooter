@@ -17,7 +17,7 @@ public class TitleDirector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // 画面がタップされた場合
+        // 画面がクリックされた場合
         if (Input.GetMouseButtonDown(0))
         {
             // 音楽停止

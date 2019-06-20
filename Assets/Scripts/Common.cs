@@ -5,16 +5,12 @@
     {
         /// <summary>タイトルシーン名</summary>
         public const string TITLE_SCENE = "TitleScene";
-        /// <summary>ファーストステージ名</summary>
-        public const string FIRST_STAGE_SCENE = "FirstStageScene";
         /// <summary>ボスシーン名</summary>
         public const string BOSS_SCENE = "BossScene";
-    }
-
-    /// <summary>定数を持つクラス</summary>
-    public static class Constans
-    {
-        /// <summary>ファーストステージのステージ部品の横幅</summary>
-        public const float FIRST_STAGE_PART_WIDTH = 5.0f;
+        /// <summary>ステージ名</summary>
+        public readonly string[] STAGE_NAMES = {
+            "FirstStageScene",
+            "SecondStageScene"
+        }; 
     }
 }

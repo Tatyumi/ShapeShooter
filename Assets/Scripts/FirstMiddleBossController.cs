@@ -77,8 +77,8 @@ public class FirstMiddleBossController : EnemyController
                 isBattle = true;
             }
         }
-
     }
+
     /// <summary>
     /// ダメージを適用する
     /// </summary>

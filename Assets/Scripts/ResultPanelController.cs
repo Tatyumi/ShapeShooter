@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -81,6 +80,8 @@ public sealed class ResultPanelController : MonoBehaviour
 
         // 待機時間
         var wait = new WaitForSeconds(1.5f);
+        // 待次のシーンに遷移するまでの待機時間
+        var nextScenewait = new WaitForSeconds(5.5f);
 
         // クリアメッセージの表示
         ClearMessage.SetActive(true);
@@ -109,7 +110,11 @@ public sealed class ResultPanelController : MonoBehaviour
         GuideMessage.SetActive(true);
         // テキスト表示SE再生
         audioManager.PlaySE(audioManager.TextOnSE.name);
-        // 待機
-        yield return wait;
+
+        // 次のシーンに遷移するまでの待機
+        yield return nextScenewait;
+
+        // 次のシーンに遷移する
+        StageDirector.NextStageMove(StageDirector.ChallengeStageName);
     }
 }

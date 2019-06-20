@@ -54,9 +54,11 @@ public class EnemyController : MonoBehaviour
         // 体力を1減らす 
         hp -= 1;
 
-        // 体力が0以下の場合
+        // hpチェック
         if (hp <= 0)
         {
+            // hpが0以下の場合
+
             // 破壊SE再生
             audioManager.PlaySE(audioManager.DestroySE.name);
 
@@ -69,7 +71,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            // 体力が残っている場合
+            // hpが1以上の場合
 
             // ダメージSEを再生
             audioManager.PlaySE(audioManager.DamageSE.name);

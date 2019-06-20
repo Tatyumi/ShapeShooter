@@ -23,8 +23,11 @@ public class TitleDirector : MonoBehaviour
             // 音楽停止
             //audioManager.StopSound();
 
+            // インスタンス取得
+            var SceneName = new SceneName();
+
             // 最初のステージに移行
-            SceneManager.LoadScene(SceneName.FIRST_STAGE_SCENE);
+            SceneManager.LoadScene(SceneName.STAGE_NAMES[0]);
         }
     }
 

@@ -4,18 +4,10 @@ public class BarrierController : EnemyController
 {
     /// <summary>破壊演出</summary>
     public ParticleSystem DestroyDirection;
-
-    /// <summary>
-    /// 初期化
-    /// </summary>
-    protected override void Initialize()
-    {
-        // 音楽データの取得
-        audioManager = AudioManager.Instance;
-
-        // 体力の取得
-        hp = EnemyData.Hp;
-    }
+    /// <summary>ボス</summary>
+    public EnemyController Boss;
+    /// <summary>エネミーバレットジェネレーター</summary>
+    public EnemyBulletGenerator BossBulletGenerator;
 
     /// <summary>
     /// ダメージを適用する
@@ -38,6 +30,10 @@ public class BarrierController : EnemyController
 
             // パーティクルシステムを再生
             DestroyDirection.Play();
+
+            // ボス、バレットジェネレーターを有効にする
+            Boss.enabled = true;
+            BossBulletGenerator.enabled = true;
 
             // 破棄する
             Destroy(gameObject);

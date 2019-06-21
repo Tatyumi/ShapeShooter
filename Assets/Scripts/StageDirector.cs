@@ -48,12 +48,12 @@ public class StageDirector : MonoBehaviour
     public static void NextStageMove(string stageName)
     {
         // インスタンス取得
-        var SceneName = new SceneName();
+        var sceneName = new SceneName();
 
         // 現在のステージに該当する要素番号を取得
-        int stageIndex = Array.IndexOf(SceneName.STAGE_NAMES, stageName);
+        int stageIndex = Array.IndexOf(sceneName.STAGE_NAMES, stageName);
 
         // 次のシーンに遷移する
-        SceneManager.LoadScene(SceneName.STAGE_NAMES[stageIndex + 1]);
+        SceneManager.LoadScene(sceneName.STAGE_NAMES[stageIndex + 1]);
     }
 }

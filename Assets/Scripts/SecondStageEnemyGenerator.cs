@@ -16,9 +16,9 @@ public class SecondStageEnemyGenerator : EnemyGenerator
     {
         None = -1,
         Bottom,
+        Top,
         Left,
-        Right,
-        Top
+        Right
     }
 
     private void Start()
@@ -34,20 +34,91 @@ public class SecondStageEnemyGenerator : EnemyGenerator
     {
         // 次のフェイズまでの待機時間
         var nextPhase = new WaitForSeconds(3.5f);
+        
         // 待機時間
         var wait = new WaitForSeconds(1);
+        
         // 連続して生成する回数
         var consecutivelyGeneratCount = 3;
 
         // 待機
         yield return nextPhase;
 
+        // 下に生成
+        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
+        yield return wait;
+        // 左に生成
+        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Left);
+        yield return wait;
+        // 上に生成
+        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Top);
+        yield return wait;
+        // 右に生成
+        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Right);
+
+        // 待機
+        yield return nextPhase;
+
+        // 左に生成
+        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Left);
+        yield return wait;
+        // 上に生成
+        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Top);
+        yield return wait;
+        // 右に生成
+        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Right);
+        yield return wait;
+        // 下に生成
+        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
+
+        // 待機
+        yield return nextPhase;
+
+        // 下に３体生成
+        for (int i = 0; i < consecutivelyGeneratCount; i++)
+        {
+            GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
+            yield return wait;
+        }
+
+        // 左に３体生成
+        for (int i = 0; i < consecutivelyGeneratCount; i++)
+        {
+            GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Left);
+            yield return wait;
+        }
+
+        // 上に３体生成
+        for (int i = 0; i < consecutivelyGeneratCount; i++)
+        {
+            GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Top);
+            yield return wait;
+        }
+
+        // 右に３体生成
+        for (int i = 0; i < consecutivelyGeneratCount; i++)
+        {
+            GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Right);
+            yield return wait;
+        }
+
+        // 下に生成
         GeneratEnemyObj(ZigzagdEnemyPrefab, (int)GeneratSpot.Bottom);
         yield return wait;
+
+        // 待機
+        yield return nextPhase;
+
+        // 下に生成
+        GeneratEnemyObj(ZigzagdEnemyPrefab, (int)GeneratSpot.Bottom);
+        yield return wait;
+        // 右に生成
         GeneratEnemyObj(ZigzagdEnemyPrefab, (int)GeneratSpot.Right);
         yield return wait;
+        // 上に生成
         GeneratEnemyObj(ZigzagdEnemyPrefab, (int)GeneratSpot.Top);
         yield return wait;
+        // 左に生成
         GeneratEnemyObj(ZigzagdEnemyPrefab, (int)GeneratSpot.Left);
         yield return wait;
 
@@ -61,20 +132,27 @@ public class SecondStageEnemyGenerator : EnemyGenerator
             yield return wait;
         }
 
+        // 左に生成
         GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Left);
         yield return wait;
-
+        // 上に生成
+        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Top);
+        yield return wait;
+        // 右に生成
         GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Right);
         yield return wait;
 
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Top);
-        yield return wait;
+        // 下5体生成
+        for (int i = 0; i < 5; i++)
+        {
+            GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Top);
+            yield return wait;
+        }
 
-
-        // 下に10体生成
+        // 上に10体生成
         for (int i = 0; i < 10; i++)
         {
-            GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
+            GeneratEnemyObj(ZigzagdEnemyPrefab, (int)GeneratSpot.Bottom);
             yield return wait;
         }
 

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01976cc645ad8b24dba193ccceefd709, type: 3}
   m_Name: SecondBossBulletData
   m_EditorClassIdentifier: 
-  Speed: 0
-  LifeTime: 0
+  Speed: 1
+  LifeTime: 2

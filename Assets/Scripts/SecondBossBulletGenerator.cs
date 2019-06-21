@@ -16,7 +16,7 @@ public class SecondBossBulletGenerator : EnemyBulletGenerator
         audioManager = AudioManager.Instance;
 
         // 攻撃間隔の初期化
-        span = 0.7f;
+        span = 0.5f;
 
         // 無効にする
         enabled = false;

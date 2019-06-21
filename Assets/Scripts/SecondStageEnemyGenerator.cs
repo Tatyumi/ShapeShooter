@@ -160,7 +160,7 @@ public class SecondStageEnemyGenerator : EnemyGenerator
         yield return nextPhase;
 
         // 中ボスを有効にする
-        MiddelBoss.GetComponent<FirstMiddleBossController>().enabled = true;
+        MiddelBoss.GetComponent<SecondMiddleBossController>().enabled = true;
 
         // 終了
         yield return null;

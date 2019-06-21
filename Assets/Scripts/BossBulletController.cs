@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class FirstBossBulletController : EnemyBulletController
+public class BossBulletController : EnemyBulletController
 {
     /// <summary>
     /// 衝突処理

@@ -33,6 +33,9 @@ public class SecondBossBulletGenerator : EnemyBulletGenerator
         // 生成オブジェクト格納配列
         GameObject gameObject = Instantiate(BulletPrefab) as GameObject;
 
+        // ゲームオブジェクトをPauseManagerの子にする
+        gameObject.transform.SetParent(PauseManager.transform, false);
+
         // 中ボスの座標に配置する
         gameObject.transform.position = Boss.transform.position;
 

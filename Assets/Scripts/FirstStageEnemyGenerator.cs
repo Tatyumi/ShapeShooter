@@ -48,14 +48,14 @@ public sealed class FirstStageEnemyGenerator : EnemyGenerator
         // 左下に３体生成
         for (int i = 0; i < consecutivelyGeneratCount; i++)
         {
-            GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.BottomLeft);
+            GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.BottomLeft);
             yield return wait;
         }
 
         // 右下に３体生成
         for (int i = 0; i < consecutivelyGeneratCount; i++)
         {
-            GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.BottomRight);
+            GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.BottomRight);
             yield return wait;
         }
 
@@ -63,30 +63,30 @@ public sealed class FirstStageEnemyGenerator : EnemyGenerator
         yield return nextPhase;
 
         // 下に生成
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
         yield return wait;
 
         // 左下に生成
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.BottomLeft);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.BottomLeft);
         yield return wait;
 
         // 左上に生成
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.TopLeft);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.TopLeft);
         yield return wait;
 
         // 待機
         yield return nextPhase;
 
         // 上に生成
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Top);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.Top);
         yield return wait;
 
         // 右上に生成
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.TopRight);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.TopRight);
         yield return wait;
 
         // 右下に生成
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.BottomRight);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.BottomRight);
         yield return wait;
 
         // 待機
@@ -95,14 +95,14 @@ public sealed class FirstStageEnemyGenerator : EnemyGenerator
         // 左上に３体生成
         for (int i = 0; i < consecutivelyGeneratCount; i++)
         {
-            GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.TopLeft);
+            GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.TopLeft);
             yield return wait;
         }
 
         // 上に３体生成
         for (int i = 0; i < consecutivelyGeneratCount; i++)
         {
-            GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Top);
+            GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.Top);
             yield return wait;
         }
 
@@ -110,67 +110,67 @@ public sealed class FirstStageEnemyGenerator : EnemyGenerator
         yield return nextPhase;
 
         // 右上,右下に生成に生成
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.TopRight);
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.BottomRight);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.TopRight);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.BottomRight);
 
         // 待機
         yield return nextPhase;
 
         // 左上,左下に生成
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.TopLeft);
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.BottomLeft);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.TopLeft);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.BottomLeft);
 
         // 待機
         yield return nextPhase;
 
         // 上、左上、右上に生成
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Top);
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.TopLeft);
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.TopRight);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.Top);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.TopLeft);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.TopRight);
         yield return wait;
 
         // 待機
         yield return nextPhase;
 
         // 下、左下、右下に生成
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.BottomLeft);
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.BottomRight);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.BottomLeft);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.BottomRight);
         yield return wait;
 
         // 待機
         yield return nextPhase;
 
         // 2週順に敵を生成
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
         yield return wait;
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.BottomLeft);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.BottomLeft);
         yield return wait;
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.TopLeft);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.TopLeft);
         yield return wait;
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Top);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.Top);
         yield return wait;
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.TopRight);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.TopRight);
         yield return wait;
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.BottomRight);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.BottomRight);
         yield return wait;
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
         yield return wait;
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.BottomLeft);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.BottomLeft);
         yield return wait;
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.TopLeft);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.TopLeft);
         yield return wait;
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Top);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.Top);
         yield return wait;
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.TopRight);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.TopRight);
         yield return wait;
-        GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.BottomRight);
+        GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.BottomRight);
         yield return wait;
 
         // 下に10体生成
         for (int i = 0; i < 10; i++)
         {
-            GeneratEnemyObj(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
+            GeneratEnemy(StandardEnemyPrefab, (int)GeneratSpot.Bottom);
             yield return wait;
         }
 

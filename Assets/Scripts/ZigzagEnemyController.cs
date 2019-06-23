@@ -1,8 +1,8 @@
-﻿using Common;
-using UnityEngine;
+﻿using UnityEngine;
 
 public sealed class ZigzagEnemyController : EnemyController
 {
+    public GameObject targetObject { get; set; }
     /// <summary>左右に動く速度</summary>
     private float zigzagSpeed = 0.1f;
     /// <summary>中心座標</summary>
@@ -15,13 +15,11 @@ public sealed class ZigzagEnemyController : EnemyController
         // 初期化
         base.Initialize();
 
-
-        // TODO ステージの横幅の求め方
-        // ステージの横幅(半分)を取得
-        var radius = 7 / 2;
-
         // 中心座標取得
         oPos = transform.position;
+
+        // ステージの横幅(半分)を取得
+        var radius = (targetObject.transform.localScale.x / 2) - (transform.localScale.x / 2);
 
         // 面積を算出
         area = radius * radius;
@@ -40,7 +38,7 @@ public sealed class ZigzagEnemyController : EnemyController
             + (transform.position.y - oPos.y) * (transform.position.y - oPos.y);
 
         // 面積外の座標か判別
-        if(pointPos > area)
+        if (pointPos > area)
         {
             // 面積外の場合
 

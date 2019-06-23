@@ -10,6 +10,14 @@ public abstract class EnemyGenerator : MonoBehaviour
     public GameObject StagePart;
     /// <summary>ポーズマネージャー</summary>
     public GameObject PauseManager;
+    /// <summary>スタンダードエネミーのプレファブ</summary>
+    public GameObject StandardEnemyPrefab;
+    /// <summary>ジグザグエネミーのプレファブ</summary>
+    public GameObject ZigzagdEnemyPrefab;
+    /// <summary>回転エネミーのプレファブ</summary>
+    public GameObject AroundEnemyPrefab;
+    /// <summary>中ボス</summary>
+    public GameObject MiddelBoss;
     /// <summary>経過時間</summary>
     protected float delta;
     /// <summary>ゲーム進捗度</summary>

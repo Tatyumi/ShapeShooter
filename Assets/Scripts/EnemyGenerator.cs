@@ -63,9 +63,6 @@ public abstract class EnemyGenerator : MonoBehaviour
         StartCoroutine(corutine);
     }
 
-    // 生成開始処理
-    protected abstract IEnumerator StartGenerat();
-
     /// <summary>
     /// 指定した場所から敵キャラを生成する
     /// </summary>
@@ -138,4 +135,7 @@ public abstract class EnemyGenerator : MonoBehaviour
     {
         StartCoroutine(corutine);
     }
+
+    // 生成開始処理
+    protected abstract IEnumerator StartGenerat();
 }

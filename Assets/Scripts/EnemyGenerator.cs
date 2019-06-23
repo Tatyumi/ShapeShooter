@@ -52,6 +52,15 @@ public abstract class EnemyGenerator : MonoBehaviour
         phaseStartTime = 3;
     }
 
+    private void Start()
+    {
+        // コルーチンの取得
+        corutine = StartGenerat();
+
+        // 処理開始
+        StartCoroutine(corutine);
+    }
+
     // 生成開始処理
     protected abstract IEnumerator StartGenerat();
 

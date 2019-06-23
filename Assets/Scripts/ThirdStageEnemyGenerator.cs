@@ -19,15 +19,10 @@ public class ThirdStageEnemyGenerator : EnemyGenerator
         BottomRight
     }
 
-    private void Start()
-    {
-        // コルーチンの取得
-        corutine = StartGenerat();
-
-        // 処理開始
-        StartCoroutine(corutine);
-    }
-
+    /// <summary>
+    /// 敵キャラ生成コルーチン
+    /// </summary>
+    /// <returns></returns>
     protected override IEnumerator StartGenerat()
     {
         // 次のフェイズまでの待機時間

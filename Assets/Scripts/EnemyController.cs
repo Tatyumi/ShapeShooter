@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour
         Initialize();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // 移動
         Move();

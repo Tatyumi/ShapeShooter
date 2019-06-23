@@ -10,7 +10,8 @@
         /// <summary>ステージ名</summary>
         public readonly string[] STAGE_NAMES = {
             "FirstStageScene",
-            "SecondStageScene"
+            "SecondStageScene",
+            "ThirdStageScene"
         }; 
     }
 }

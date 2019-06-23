@@ -4,18 +4,8 @@ using UnityEngine;
 
 public class AroundEnemyController : EnemyController
 {
-    /// <summary>対象オブジェクト</summary>
-    private Vector3 targetObject;
-
-    private void Start()
-    {
-        // 初期化
-        base.Initialize();
-
-        // prefabであるため、Find関数を用いて取得している。あまり好きなやり方ではない
-        // ステージオブジェクトの座標を取得
-        targetObject =  GameObject.Find("Stage").transform.position;
-    }
+    /// <summary>対象座標</summary>
+    public Vector3 targetVec { get; set; }
 
     /// <summary>
     /// 左右に揺れながら移動する
@@ -26,6 +16,6 @@ public class AroundEnemyController : EnemyController
         transform.Translate(0, 0, moveSpeed);
 
         // 対象オブジェクトの座標を中心に右に回転
-        transform.RotateAround(targetObject, Vector3.forward, moveSpeed *5);
+        transform.RotateAround(targetVec, Vector3.forward, moveSpeed * 5);
     }
 }

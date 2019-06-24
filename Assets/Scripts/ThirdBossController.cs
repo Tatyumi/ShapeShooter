@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ThirdBossController : EnemyController
 {
+    /// <summary>ジェネレーター</summary>
+    public EnemyBulletGenerator[] EnemyBulletGenerator;
     /// <summary>破壊演出</summary>
     public ParticleSystem DestroyDirection;
-    /// <summary>ジェネレーター</summary>
-    public EnemyBulletGenerator EnemyBulletGenerator;
     /// <summary>リザルトパネル</summary>
     public GameObject ResultPanel;
 
@@ -71,8 +71,11 @@ public class ThirdBossController : EnemyController
             {
                 // nullでない場合
 
-                // ジェネレータを無効にする
-                EnemyBulletGenerator.GetComponent<EnemyBulletGenerator>().enabled = false;
+                // 全てのジェネレータを無効にする
+                for (int i = 0; i > EnemyBulletGenerator.Length; i++)
+                {
+                    EnemyBulletGenerator[i].GetComponent<EnemyBulletGenerator>().enabled = false;
+                }
             }
 
             // リザルトパネルを表示する

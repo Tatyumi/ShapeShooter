@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class ScoreController : MonoBehaviour
 {
+    /// <summary>残機数テキストコントローラーオブジェクト</summary>
+    public GameObject LifeCountTextController;
     /// <summary>スコア</summary>
     public static int score = 0;
     /// <summary>ワンアップスコア</summary>
@@ -11,6 +13,8 @@ public class ScoreController : MonoBehaviour
     public static int OneUpScoreBaseValue = 10000;
     /// <summary>スコアテキスト</summary>
     private static Text scoreText;
+    /// <summary>残機数テキストコントローラー</summary>
+    private static LifeCountTextController life;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +33,9 @@ public class ScoreController : MonoBehaviour
 
         // 初期値を代入
         scoreText.text = score.ToString();
+
+        // コンポーネントの取得
+        life = LifeCountTextController.GetComponent<LifeCountTextController>();
     }
 
     /// <summary>
@@ -49,7 +56,6 @@ public class ScoreController : MonoBehaviour
             // 達した場合
 
             // 1up処理
-            var life = new LifeCountTextController();
             life.OneUpLife();
 
             // ワンアップするスコアを更新する

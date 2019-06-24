@@ -18,7 +18,8 @@ public class ThirdBossBulletGenerator : EnemyBulletGenerator
         // ゲームオブジェクトをPauseManagerの子にする
         gameObject.transform.SetParent(PauseManager.transform, false);
 
-        gameObject.transform.position = this.transform.position;
+        // Generatorの座標に配置する
+        gameObject.transform.position = transform.position;
 
         // プレイヤーの方向を向く
         gameObject.transform.LookAt(Player.transform.position);

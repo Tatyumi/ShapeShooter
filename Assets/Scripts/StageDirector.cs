@@ -29,7 +29,6 @@ public class StageDirector : MonoBehaviour
         // BGMの再生
         audioManager.PlayBGM(StageBgmName);
 
-
         // フラグ初期化
         PauseManager.isPause = false;
 
@@ -53,7 +52,33 @@ public class StageDirector : MonoBehaviour
         // 現在のステージに該当する要素番号を取得
         int stageIndex = Array.IndexOf(sceneName.STAGE_NAMES, stageName);
 
-        // 次のシーンに遷移する
-        SceneManager.LoadScene(sceneName.STAGE_NAMES[stageIndex + 1]);
+        // 現在のステージの要素番号と全体のステージ数を比較
+        if (stageIndex != sceneName.STAGE_NAMES.Length - 1 )
+        {
+            // 異なる場合
+
+            // 次のシーンに遷移する
+            SceneManager.LoadScene(sceneName.STAGE_NAMES[stageIndex + 1]);
+        }
+        else
+        {
+            // 等しい、つまりすべてのステージをクリアした場合
+
+            // 全敵キャラを殺したかチェック
+            if(ResultPanelController.EnemyKillCount >= Constance.ALL_ENEMY_COUNT)
+            {
+                // 殺した場合
+
+                // 隠しステージに遷移する
+
+            }
+            else
+            {
+                // 殺してない場合
+
+                // 通常エンディングに移行する
+            }
+
+        }
     }
 }

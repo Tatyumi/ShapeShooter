@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d90accf775bba949afbb6990140c865, type: 3}
   m_Name: ThirdBossLeftRightBulletGeneratorData
   m_EditorClassIdentifier: 
-  Span: 1.5
+  Span: 1

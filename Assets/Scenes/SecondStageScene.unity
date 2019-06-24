@@ -847,6 +847,7 @@ MonoBehaviour:
   SecondStageBGM: {fileID: 8300000, guid: e8a8205c8af8d29438ae84b453eca405, type: 3}
   ThirdStageBGM: {fileID: 8300000, guid: 3506cf60e2671a2499716e4fdc3ac0fd, type: 3}
   BossSceneBGM: {fileID: 8300000, guid: 537d9d2ddecf5e2409678950bcb00ff7, type: 3}
+  EndingBGM: {fileID: 0}
   BulletSE: {fileID: 8300000, guid: 771824a9fa1d3654386d563b8128c24e, type: 3}
   DestroySE: {fileID: 8300000, guid: 29987a26d91d3a041b09e15d228e80db, type: 3}
   DamageSE: {fileID: 8300000, guid: 271f3dc685b33d24499150678bc5920f, type: 3}
@@ -856,6 +857,9 @@ MonoBehaviour:
   BossBulletSE: {fileID: 8300000, guid: c2e89be92f4ef234185aecd2d9fcbbb7, type: 3}
   TextOnSE: {fileID: 8300000, guid: 07398e83e9e8e6d4589d106b7f1d5de5, type: 3}
   BreakBarrierSE: {fileID: 8300000, guid: 3949a57ec61f5b04b8408b7372dc8504, type: 3}
+  SecondBossBulletSE: {fileID: 0}
+  ThirdBossBulletSE: {fileID: 0}
+  OneUpSE: {fileID: 0}
 --- !u!4 &303325379
 Transform:
   m_ObjectHideFlags: 0
@@ -5763,6 +5767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c953009da020bcd43ad2ba49f65bef5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LifeCountTextController: {fileID: 163326486}
 --- !u!114 &529694964
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5801,6 +5801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c953009da020bcd43ad2ba49f65bef5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LifeCountTextController: {fileID: 1306775409}
 --- !u!1 &697459548
 GameObject:
   m_ObjectHideFlags: 0

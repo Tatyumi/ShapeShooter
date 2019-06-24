@@ -1538,6 +1538,8 @@ MonoBehaviour:
   BossBulletSE: {fileID: 8300000, guid: c2e89be92f4ef234185aecd2d9fcbbb7, type: 3}
   TextOnSE: {fileID: 8300000, guid: 07398e83e9e8e6d4589d106b7f1d5de5, type: 3}
   BreakBarrierSE: {fileID: 8300000, guid: 3949a57ec61f5b04b8408b7372dc8504, type: 3}
+  SecondBossBulletSE: {fileID: 8300000, guid: a2337e63b06b4a1469a22ec764d6c89c, type: 3}
+  ThirdBossBulletSE: {fileID: 8300000, guid: ce3c730f5e1b1f048b1b3855f7be8ca9, type: 3}
 --- !u!4 &952543059
 Transform:
   m_ObjectHideFlags: 0

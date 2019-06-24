@@ -49,5 +49,8 @@ public class TitleDirector : MonoBehaviour
         ResultPanelController.EnemyKillCount = 0;
 
         // TODO BGMの再生
+
+        // 1upスコアの初期化
+        ScoreController.OneUpScore = ScoreController.OneUpScoreBaseValue;
     }
 }

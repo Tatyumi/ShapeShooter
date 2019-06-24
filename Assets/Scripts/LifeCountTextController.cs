@@ -35,9 +35,10 @@ public sealed class LifeCountTextController : MonoBehaviour
     /// <summary>
     /// 残機数加算
     /// </summary>
-    public void AddLifeCount()
+    public void OneUpLife()
     {
-        // TODO 残機アップSEの追加
+        // ワンアップアップSEの追加
+        audioManager.PlaySE(audioManager.OneUpSE.name);
 
         // 残機数を1増やす
         LifeCount++;

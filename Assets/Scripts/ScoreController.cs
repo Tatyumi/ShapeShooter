@@ -1,12 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreController : MonoBehaviour
 {
     /// <summary>スコア</summary>
     public static int score = 0;
+    /// <summary>ワンアップスコア</summary>
+    public static int OneUpScore;
+    /// <summary>ワンアップスコア基準値</summary>
+    public static int OneUpScoreBaseValue = 10000;
     /// <summary>スコアテキスト</summary>
     private static Text scoreText;
 
@@ -40,6 +42,18 @@ public class ScoreController : MonoBehaviour
 
         // テキストに代入
         scoreText.text = score.ToString();
-    }
 
+        // スコアがワンアップスコアに達したか判別
+        if(score >= OneUpScore)
+        {
+            // 達した場合
+
+            // 1up処理
+            var life = new LifeCountTextController();
+            life.OneUpLife();
+
+            // ワンアップするスコアを更新する
+            OneUpScore += OneUpScoreBaseValue;
+        }
+    }
 }

@@ -13,7 +13,7 @@ public class SecondBossBulletGenerator : EnemyBulletGenerator
     protected override void Generat()
     {
         // SEの再生
-        audioManager.PlaySE(audioManager.BossBulletSE.name);
+        audioManager.PlaySE(audioManager.SecondBossBulletSE.name);
 
         // 生成オブジェクト格納配列
         GameObject gameObject = Instantiate(BulletPrefab) as GameObject;

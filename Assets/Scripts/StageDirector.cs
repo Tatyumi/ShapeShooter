@@ -55,7 +55,7 @@ public class StageDirector : MonoBehaviour
         // 現在のステージの要素番号と全体のステージ数を比較
         if (stageIndex != sceneName.STAGE_NAMES.Length - 1 )
         {
-            // 異なる場合
+            // 異なる、つまり全てのステージをクリアしていない場合
 
             // 次のシーンに遷移する
             SceneManager.LoadScene(sceneName.STAGE_NAMES[stageIndex + 1]);
@@ -77,6 +77,7 @@ public class StageDirector : MonoBehaviour
                 // 殺してない場合
 
                 // 通常エンディングに移行する
+                SceneManager.LoadScene(SceneName.ENDING_SCENE);
             }
 
         }

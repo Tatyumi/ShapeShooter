@@ -33,9 +33,6 @@ public class ThirdBossController : EnemyController
     {
         // 回転処理
         transform.Rotate(moveSpeed, moveSpeed, 0.0f);
-
-        // y方向に動く
-        transform.Translate(0, Mathf.Sin(Time.time * moveSpeed) * 0.2f, 0);
     }
 
     /// <summary>

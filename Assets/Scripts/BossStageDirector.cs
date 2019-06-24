@@ -29,6 +29,9 @@ public class BossStageDirector : StageDirector
         // インスタンス取得
         var sceneName = new SceneName();
 
+        // テストコード
+        ChallengeStageName = sceneName.STAGE_NAMES[0];
+
         // 挑戦したステージ名からステージ名リストの要素番号を取得する
         var activeBossNumber= Array.IndexOf(sceneName.STAGE_NAMES, ChallengeStageName);
 

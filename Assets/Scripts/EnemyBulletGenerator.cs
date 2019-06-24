@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBulletGenerator : MonoBehaviour
 {
+    public BulletGeneratorData EnemyBulletGeneratorData;
     /// <summary>プレイヤー</summary>
     public GameObject Player;
     /// <summary>弾</summary>
@@ -12,8 +13,6 @@ public class EnemyBulletGenerator : MonoBehaviour
     public GameObject PauseManager;
     /// <summary>オーディオマネージャー</summary>
     protected AudioManager audioManager;
-    /// <summary>生成間隔</summary>
-    protected float span = 1.0f;
     /// <summary>計測時間</summary>
     private float delta = 0.0f;
 
@@ -31,7 +30,7 @@ public class EnemyBulletGenerator : MonoBehaviour
         delta += Time.deltaTime;
 
         // 一定時間経過したか判別
-        if (delta > span)
+        if (delta > EnemyBulletGeneratorData.Span)
         {
             // 生成
             Generat();

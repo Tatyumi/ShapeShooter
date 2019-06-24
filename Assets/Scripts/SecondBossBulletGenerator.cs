@@ -8,18 +8,6 @@ public class SecondBossBulletGenerator : EnemyBulletGenerator
     public GameObject Boss;
 
     /// <summary>
-    /// 初期化
-    /// </summary>
-    protected override void Initialize()
-    {
-        // オーディオマネージャーの取得
-        audioManager = AudioManager.Instance;
-
-        // 攻撃間隔の初期化
-        span = 0.5f;
-    }
-
-    /// <summary>
     /// 生成する
     /// </summary>
     protected override void Generat()

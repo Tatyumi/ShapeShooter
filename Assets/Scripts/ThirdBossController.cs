@@ -52,7 +52,7 @@ public class ThirdBossController : EnemyController
             audioManager.StopSound();
 
             // ボスの位置にパーティクルシステムを配置
-            DestroyDirection.transform.localPosition = transform.localPosition;
+            DestroyDirection.transform.position = transform.position;
 
             // パーティクルシステムを再生
             DestroyDirection.Play();

@@ -7,6 +7,8 @@
         public const string TITLE_SCENE = "TitleScene";
         /// <summary>ボスシーン名</summary>
         public const string BOSS_SCENE = "BossScene";
+        /// <summary>エンディングシーン名</summary>
+        public const string ENDING_SCENE = "EndingScene";
         /// <summary>ステージ名</summary>
         public readonly string[] STAGE_NAMES = {
             "FirstStageScene",

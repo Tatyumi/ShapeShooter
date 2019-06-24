@@ -14,4 +14,11 @@
             "ThirdStageScene"
         }; 
     }
+
+    /// <summary>定数を持つクラス</summary>
+    public sealed class Constance
+    {
+        /// <summary>全ての敵の数</summary>
+        public const int ALL_ENEMY_COUNT = 147;
+    }
 }

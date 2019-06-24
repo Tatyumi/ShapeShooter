@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemyBulletController : MonoBehaviour
 {
-    /// <summary>弾が発する光</summary>
-    public GameObject BulletLight;
     /// <summary>敵の弾情報</summary>
     public BulletData EnemyBulletData;
     /// <summary>オーディオマネージャー</summary>

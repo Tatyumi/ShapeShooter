@@ -585,12 +585,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4178cf5ffd5c7a4a858a4567afe558d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stage: {fileID: 0}
   StagePart: {fileID: 1891696951}
   PauseManager: {fileID: 665839533}
   StandardEnemyPrefab: {fileID: 8137149839786746306, guid: 6a7689d519547da43af75700ea321737,
     type: 3}
   ZigzagdEnemyPrefab: {fileID: 4858811514773409787, guid: 4a2fd4eee54eb6144b9be4c006ed99a9,
     type: 3}
+  AroundEnemyPrefab: {fileID: 0}
   MiddelBoss: {fileID: 689890121}
 --- !u!1 &248800093
 GameObject:
@@ -6579,6 +6581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e8694a78246b249ad13c966176e05e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyBulletGeneratorData: {fileID: 11400000, guid: 9ccbc6313d4642f48b7327d3d64833aa,
+    type: 2}
   Player: {fileID: 1965439626}
   BulletPrefab: {fileID: 1202673999589170964, guid: fffca11828c2b7e4ab2d8f47faa3fcfe,
     type: 3}

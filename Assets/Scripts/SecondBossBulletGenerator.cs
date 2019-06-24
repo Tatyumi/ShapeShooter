@@ -17,9 +17,6 @@ public class SecondBossBulletGenerator : EnemyBulletGenerator
 
         // 攻撃間隔の初期化
         span = 0.5f;
-
-        // 無効にする
-        enabled = false;
     }
 
     /// <summary>

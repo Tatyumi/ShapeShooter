@@ -24,9 +24,6 @@ public class SecondBossController : EnemyController
 
         // 移動速度の取得
         moveSpeed = EnemyData.MoveSpeed;
-
-        // 無効にする
-        enabled = false;
     }
 
     /// <summary>

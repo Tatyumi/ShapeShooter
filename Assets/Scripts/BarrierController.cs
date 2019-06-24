@@ -10,6 +10,25 @@ public class BarrierController : EnemyController
     public EnemyBulletGenerator BossBulletGenerator;
 
     /// <summary>
+    /// 初期化
+    /// </summary>
+    protected override void Initialize()
+    {
+        // 音楽データの取得
+        audioManager = AudioManager.Instance;
+
+        // 体力の取得
+        hp = EnemyData.Hp;
+
+        // 移動速度の取得
+        moveSpeed = EnemyData.MoveSpeed * -1;
+
+        // ボス、バレットジェネレーターを無効にする
+        Boss.enabled = false;
+        BossBulletGenerator.enabled = false;
+    }
+
+    /// <summary>
     /// ダメージを適用する
     /// </summary>
     public override bool ApplyDamage()

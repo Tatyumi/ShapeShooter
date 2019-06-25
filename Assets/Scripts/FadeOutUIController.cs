@@ -48,7 +48,7 @@ public class FadeOutUIController : MonoBehaviour
         // imageコンポーネントの取得
         FadeOutImage = gameObject.GetComponent<Image>();
 
-        // ゲームオーバーパネルの色(RGB)の値を取得
+        // imageの色(RGB)の値を取得
         red = FadeOutImage.color.r;
         green = FadeOutImage.color.g;
         blue = FadeOutImage.color.b;

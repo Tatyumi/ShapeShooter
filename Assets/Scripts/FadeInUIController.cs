@@ -48,7 +48,7 @@ public abstract class FadeInUIController : MonoBehaviour
         // imageコンポーネントの取得
         ActionPanel = gameObject.GetComponent<Image>();
 
-        // ゲームオーバーパネルの色(RGB)の値を取得
+        // imageの色(RGB)の値を取得
         red = ActionPanel.color.r;
         green = ActionPanel.color.g;
         blue = ActionPanel.color.b;

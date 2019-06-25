@@ -22,10 +22,6 @@ public abstract class EnemyGenerator : MonoBehaviour
     public GameObject MiddelBoss;
     /// <summary>経過時間</summary>
     protected float delta;
-    /// <summary>ゲーム進捗度</summary>
-    protected int phase;
-    /// <summary>フェイズ開始時間</summary>
-    protected int phaseStartTime;
     /// <summary>各生成場所</summary>
     private Transform[] EnemyGeneratSpots;
     /// <summary>コルーチン</summary>
@@ -48,10 +44,6 @@ public abstract class EnemyGenerator : MonoBehaviour
 
         // 子要素の生成場所を配列で取得
         EnemyGeneratSpots = gameObject.GetComponentsInChildrenWithoutSelf<Transform>();
-
-        // ゲーム進捗初期化
-        phase = 1;
-        phaseStartTime = 3;
     }
 
     private void Start()

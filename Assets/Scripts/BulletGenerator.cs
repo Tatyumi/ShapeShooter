@@ -18,7 +18,7 @@ public class BulletGenerator : MonoBehaviour
     private float delta = 0.0f;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         // 初期化
         Initialize();

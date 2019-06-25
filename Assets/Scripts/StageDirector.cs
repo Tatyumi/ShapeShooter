@@ -70,7 +70,7 @@ public class StageDirector : MonoBehaviour
                 // 殺した場合
 
                 // 隠しステージに遷移する
-
+                SceneManager.LoadScene(SceneName.HIDDEN_STAGE_SCENE);
             }
             else
             {
@@ -79,7 +79,6 @@ public class StageDirector : MonoBehaviour
                 // 通常エンディングに移行する
                 SceneManager.LoadScene(SceneName.ENDING_SCENE);
             }
-
         }
     }
 }

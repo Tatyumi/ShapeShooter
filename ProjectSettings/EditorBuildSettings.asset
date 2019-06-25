@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndingScene.unity
     guid: 665958f0376562247bdfab6ad01dd170
+  - enabled: 1
+    path: Assets/Scenes/HiddenStageScene.unity
+    guid: e3829e3bfc38e91419171a32fd06e519
   m_configObjects: {}

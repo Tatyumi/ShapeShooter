@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class LastBossController : EnemyController
 {
+    /// <summary>終了フラグ</summary>
+    public static bool isEnd = false;
+    /// <summary>弾生成オブジェクト</summary>
+    public GameObject BulletGenerator;
+    /// <summary>破壊演出</summary>
+    public ParticleSystem DestroyDirection;
+    /// <summary>エンドメッセージパネル</summary>
+    public GameObject EndMessagePanel;
     /// <summary>初期位置</summary>
     private Vector3 startPos = new Vector3(-1, 60, 20.8f);
     /// <summary>落下速度</summary>
@@ -22,13 +30,15 @@ public class LastBossController : EnemyController
         {
             // 達した場合
 
+
+            BulletGenerator.SetActive(true);
         }
         else
         {
             // 達していない場合
 
             // 下降する
-            transform.localPosition = 
+            transform.localPosition =
                 new Vector3(transform.localPosition.x, transform.localPosition.y - fallSpeed, transform.localPosition.z);
         }
     }
@@ -49,6 +59,8 @@ public class LastBossController : EnemyController
 
         // 初期位置の代入
         transform.localPosition = startPos;
+
+        BulletGenerator.SetActive(false);
     }
 
 
@@ -60,4 +72,50 @@ public class LastBossController : EnemyController
         // 回転
         transform.Rotate(0, moveSpeed, moveSpeed);
     }
+
+    /// <summary>
+    /// ダメージを適用する
+    /// </summary>
+    public override bool ApplyDamage()
+    {
+        // 体力を1減らす 
+        hp -= 1;
+
+        // hpチェック
+        if (hp <= 0 && isEnd)
+        {
+            // hpが0以下の場合
+
+            // 音楽の停止
+            audioManager.StopSound();
+
+            // ボスの位置にパーティクルシステムを配置
+            DestroyDirection.transform.position = transform.position;
+
+            // パーティクルシステムを再生
+            DestroyDirection.Play();
+
+            // 破壊SE再生
+            audioManager.PlaySE(audioManager.DestroySE.name);
+
+            // スコア加算
+            ScoreController.AddScore(EnemyData.Score);
+
+            // 表示
+            EndMessagePanel.SetActive(true);
+
+            // 破棄する
+            Destroy(gameObject);
+            return true;
+        }
+        else
+        {
+            // hpが1以上の場合
+
+            // ダメージSEを再生
+            audioManager.PlaySE(audioManager.DamageSE.name);
+            return false;
+        }
+    }
+
 }

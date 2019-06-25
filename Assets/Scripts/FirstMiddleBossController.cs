@@ -1,15 +1,11 @@
 ﻿using UnityEngine;
 
-public class FirstMiddleBossController : EnemyController
+public class FirstMiddleBossController : MiddleBossController
 {
     /// <summary>ステージ</summary>
     public GameObject Stage;
     /// <summary>プレイヤー</summary>
     public GameObject Player;
-    /// <summary>発光画像</summary>
-    public GameObject WhiteLightImage;
-    /// <summary>ジェネレーター</summary>
-    public GameObject MiddleBossBulletGenerator;
     /// <summary>回転速度</summary>
     private float rotateSpeed = 1.0f;
     /// <summary>戦闘フラグ</summary>
@@ -104,7 +100,7 @@ public class FirstMiddleBossController : EnemyController
                 // nullでない場合
 
                 // ジェネレータを無効にする
-                MiddleBossBulletGenerator.GetComponent<FirstMibbleBossBulletGenerator>().enabled = false;
+                MiddleBossBulletGenerator.GetComponent<EnemyBulletGenerator>().enabled = false;
             }
 
             // nullチェック

@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThirdMiddleBossController : EnemyController
+public class ThirdMiddleBossController : MiddleBossController
 {
     public Transform[] GeneratSpots;
-    /// <summary>発光画像</summary>
-    public GameObject WhiteLightImage;
     /// <summary>回転速度</summary>
     private float rotateSpeed = -100.0f;
     /// <summary>最小Z座標</summary>
@@ -53,49 +51,6 @@ public class ThirdMiddleBossController : EnemyController
 
             // ゲームオブジェクトを指定の座標に配置
             gameObject.transform.SetPositionAndRotation(GeneratSpots[spotNumber].position, GeneratSpots[spotNumber].rotation);
-        }
-    }
-
-    /// <summary>
-    /// ダメージを適用する
-    /// </summary>
-    public override bool ApplyDamage()
-    {
-        // hpを1減らす 
-        hp -= 1;
-
-        // hpチェック
-        if (hp <= 0)
-        {
-            // hpが0以下の場合
-
-            // 破壊SE再生
-            audioManager.PlaySE(audioManager.DestroySE.name);
-
-            // スコア加算
-            ScoreController.AddScore(EnemyData.Score);
-
-            // nullチェック
-            if (WhiteLightImage != null)
-            {
-                // nullではない場合
-
-                // 発光画像の表示を行う
-                WhiteLightImage.SetActive(true);
-            }
-
-            // 破棄する
-            Destroy(gameObject);
-
-            return true;
-        }
-        else
-        {
-            // hpが1以上の場合
-
-            // ダメージSEを再生
-            audioManager.PlaySE(audioManager.DamageSE.name);
-            return false;
         }
     }
 }

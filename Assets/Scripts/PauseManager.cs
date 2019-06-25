@@ -21,6 +21,8 @@ public class PauseManager : MonoBehaviour
     public GameObject PausePanel;
     /// <summary>エネミージェネレーター</summary>
     public EnemyGenerator enemyGenerator;
+    /// <summary>ウォールジェネレーター</summary>
+    public WallGenerator wallGenerator;
 
 
     private void Start()
@@ -42,9 +44,11 @@ public class PauseManager : MonoBehaviour
         // ポーズ状態が変更されていたら、Pause/Resumeを呼び出す。
         if (prevPausing != isPause)
         {
-            // enemyGeneratorのnukkチェック
+            // 各Generatorのnullチェック
             if (enemyGenerator != null)
             {
+                // enemyGeneratorがnull出ない場合
+
                 if (isPause)
                 {
                     // 中断
@@ -56,6 +60,23 @@ public class PauseManager : MonoBehaviour
                     // 再開
                     Resume();
                     enemyGenerator.Restart();
+                }
+            }
+            else if (wallGenerator != null)
+            {
+                // wallGeneratorがnull出ない場合
+
+                if (isPause)
+                {
+                    // 中断
+                    wallGenerator.Stop();
+                    Pause();
+                }
+                else
+                {
+                    // 再開
+                    Resume();
+                    wallGenerator.Restart();
                 }
             }
             else
@@ -140,6 +161,13 @@ public class PauseManager : MonoBehaviour
         {
             // enemyGeneratorのコンポーネントを取得
             enemyGenerator = enemyGenerator.GetComponent<EnemyGenerator>();
+        }
+
+        // wallGeneratorのnullチェック
+        if (wallGenerator != null)
+        {
+            // wallGeneratorのコンポーネントを取得
+            wallGenerator = wallGenerator.GetComponent<WallGenerator>();
         }
     }
 }

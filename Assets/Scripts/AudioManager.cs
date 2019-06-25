@@ -14,6 +14,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip BossSceneBGM;
     /// <summary>エンディングBGM</summary>
     public AudioClip EndingBGM;
+    /// <summary>ラストボスシーンのBGM</summary>
+    public AudioClip LastBossSceneBGM;
     /// <summary>弾発射SE</summary>
     public AudioClip BulletSE;
     /// <summary>破壊SE</summary>
@@ -81,6 +83,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             {ThirdStageBGM.name,ThirdStageBGM },
             {BossSceneBGM.name,BossSceneBGM },
             {EndingBGM.name,EndingBGM },
+            {LastBossSceneBGM.name,LastBossSceneBGM }
         };
     }
 

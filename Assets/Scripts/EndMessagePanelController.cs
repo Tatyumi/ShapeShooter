@@ -7,7 +7,7 @@ public class EndMessagePanelController : MonoBehaviour
 {
     /// <summary>クリアメッセージ</summary>
     public GameObject ClearMessage;
-    /// <summary>お礼のメッセージ</summary>
+    /// <summary>サンクメッセージ</summary>
     public GameObject ThankMessage;
     /// <summary>グッドバイメッセージ</summary>
     public GameObject GoodByeMessage;
@@ -82,19 +82,14 @@ public class EndMessagePanelController : MonoBehaviour
         // 待機
         yield return wait;
 
-        // 殺した敵キャラテキストの表示
+        // サンクメッセージの表示
         ThankMessage.SetActive(true);
         // テキスト表示SE再生
         audioManager.PlaySE(audioManager.TextOnSE.name);
         // 待機
         yield return wait;
 
-        // テキスト表示SE再生
-        audioManager.PlaySE(audioManager.TextOnSE.name);
-        // 待機
-        yield return wait;
-
-        // ガイドテキストの表示
+        // グッドバイメッセージの表示
         GoodByeMessage.SetActive(true);
         // テキスト表示SE再生
         audioManager.PlaySE(audioManager.TextOnSE.name);

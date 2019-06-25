@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HiddenStageScene.unity
     guid: e3829e3bfc38e91419171a32fd06e519
+  - enabled: 1
+    path: Assets/Scenes/LastBossScene.unity
+    guid: ef5cf2ef8e8fdd1408906b06b26f3bc6
   m_configObjects: {}

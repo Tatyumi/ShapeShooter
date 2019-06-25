@@ -164,7 +164,7 @@ public class PauseManager : MonoBehaviour
         }
 
         // wallGeneratorのnullチェック
-        if (wallGenerator != null)
+        else if (wallGenerator != null)
         {
             // wallGeneratorのコンポーネントを取得
             wallGenerator = wallGenerator.GetComponent<WallGenerator>();

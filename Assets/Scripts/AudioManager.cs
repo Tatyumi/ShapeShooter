@@ -46,6 +46,13 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     private Dictionary<string, AudioClip> SEDic;
     /// <summary>全BGM保持ディクショナリ</summary>
     private Dictionary<string, AudioClip> BGMDic;
+    /// <summary>初期ボリューム</summary>
+    private float defaultVolume = 1.0f;
+    /// <summary>フェードスピード</summary>
+    private float fadeSpeed = 0.3f;
+    /// <summary>フェードアウトフラグ</summary>
+    private bool isFadeOut;
+
 
     private void Awake()
     {
@@ -56,8 +63,15 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             return;
         }
 
+        // フラグ初期化
+        isFadeOut = false;
+
         // AudioSourceコンポーネントの取得
         audioSource = gameObject.GetComponent<AudioSource>();
+
+        // 音量の初期化
+        audioSource.volume = defaultVolume;
+
 
         // SEを格納
         SEDic = new Dictionary<string, AudioClip> {
@@ -86,6 +100,39 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             {LastBossSceneBGM.name,LastBossSceneBGM }
         };
     }
+
+    private void Update()
+    {
+        if (isFadeOut)
+        {
+            // 徐々にボリュームを下げる
+            audioSource.volume -= Time.deltaTime * fadeSpeed;
+
+            // ボリュームが0以下か判別
+            if(audioSource.volume <= 0)
+            {
+                // 0以下の場合
+
+                // 音の停止
+                audioSource.Stop();
+
+                // ボリュームを初期値に戻す
+                audioSource.volume = defaultVolume;
+
+                // フラグ更新
+                isFadeOut = false;
+            }
+        }
+    }
+
+    /// <summary>
+    /// BGMのフェードアウトを有効にする
+    /// </summary>
+    public void FadeOutBGM()
+    {
+        isFadeOut = true;
+    }
+
 
     /// <summary>
     /// BGMの再生

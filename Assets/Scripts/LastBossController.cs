@@ -17,7 +17,7 @@ public class LastBossController : EnemyController
     /// <summary>落下速度</summary>
     private float fallSpeed = 0.1f;
     /// <summary>戦闘開始ポジション</summary>
-    private float battleStartPos = 0.5f;
+    private float battleStartPos = 0.0f;
 
     // Update is called once per frame
     void Update()
@@ -26,7 +26,7 @@ public class LastBossController : EnemyController
         Move();
 
         // 一定座標に達したか判別
-        if (transform.position.y <= battleStartPos)
+        if (transform.localPosition.y <= battleStartPos)
         {
             // 達した場合
 

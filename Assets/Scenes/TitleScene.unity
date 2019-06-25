@@ -712,6 +712,7 @@ MonoBehaviour:
   ThirdStageBGM: {fileID: 8300000, guid: 3506cf60e2671a2499716e4fdc3ac0fd, type: 3}
   BossSceneBGM: {fileID: 8300000, guid: 537d9d2ddecf5e2409678950bcb00ff7, type: 3}
   EndingBGM: {fileID: 8300000, guid: 4927a6f5845a6a349ab3fc9b034932e6, type: 3}
+  LastBossSceneBGM: {fileID: 8300000, guid: 166efd605ff8d6c4896d6c2329182386, type: 3}
   BulletSE: {fileID: 8300000, guid: 51ab4b812db7cb146ac495d337639b75, type: 3}
   DestroySE: {fileID: 8300000, guid: 29987a26d91d3a041b09e15d228e80db, type: 3}
   DamageSE: {fileID: 8300000, guid: 27bec4b27ed7b614c8bad51b5d0241fc, type: 3}

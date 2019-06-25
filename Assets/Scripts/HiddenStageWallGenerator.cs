@@ -30,7 +30,7 @@ public class HiddenStageWallGenerator : WallGenerator
         var nextPhaseWait = new WaitForSeconds(3.5f);
 
         // 待機時間
-        var wait = new WaitForSeconds(1.6f);
+        var wait = new WaitForSeconds(1.7f);
 
         // 待機
         yield return nextPhaseWait;

@@ -25,6 +25,8 @@ public class HiddenStageWallGenerator : WallGenerator
     /// <returns></returns>
     protected override IEnumerator StartGenerat()
     {
+        // オーディオマネージャーの取得
+        var audioManager = AudioManager.Instance;
 
         // 次のフェイズまでの待機時間
         var nextPhaseWait = new WaitForSeconds(3.5f);
@@ -210,6 +212,8 @@ public class HiddenStageWallGenerator : WallGenerator
         GeneratWall((int)WallIndex.DiagonalRight);
         yield return wait;
 
+        // BGMのフェードアウト
+        audioManager.FadeOutBGM();
         // 画像の表示
         WhiteLightImage.SetActive(true);
 

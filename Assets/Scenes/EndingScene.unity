@@ -770,7 +770,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u3010Programar\u3011\n\nTatyumi\n\n\u3010Tester\u3011\n\x10\x11\nTatyumi\n\n\u3010Music\u3011\n\nMaouDamashii\n\nPocketsound\n\nsoundeffect-lab\n\n\n\n\nEnd?"
+  m_Text: "\u3010Programar\u3011\n\nTatyumi\n\n\u3010Debugger\u3011\n\x10\x11\nTatyumi\n\n\u3010Music\u3011\n\nMaouDamashii\n\nPocketsound\n\nsoundeffect-lab\n\n\n\n\nEnd?"
 --- !u!222 &275845725
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1529,6 +1529,7 @@ MonoBehaviour:
   ThirdStageBGM: {fileID: 8300000, guid: 3506cf60e2671a2499716e4fdc3ac0fd, type: 3}
   BossSceneBGM: {fileID: 8300000, guid: 537d9d2ddecf5e2409678950bcb00ff7, type: 3}
   EndingBGM: {fileID: 8300000, guid: 4927a6f5845a6a349ab3fc9b034932e6, type: 3}
+  LastBossSceneBGM: {fileID: 0}
   BulletSE: {fileID: 8300000, guid: 771824a9fa1d3654386d563b8128c24e, type: 3}
   DestroySE: {fileID: 8300000, guid: 29987a26d91d3a041b09e15d228e80db, type: 3}
   DamageSE: {fileID: 8300000, guid: 271f3dc685b33d24499150678bc5920f, type: 3}
@@ -1540,6 +1541,7 @@ MonoBehaviour:
   BreakBarrierSE: {fileID: 8300000, guid: 3949a57ec61f5b04b8408b7372dc8504, type: 3}
   SecondBossBulletSE: {fileID: 8300000, guid: a2337e63b06b4a1469a22ec764d6c89c, type: 3}
   ThirdBossBulletSE: {fileID: 8300000, guid: ce3c730f5e1b1f048b1b3855f7be8ca9, type: 3}
+  OneUpSE: {fileID: 0}
 --- !u!4 &952543059
 Transform:
   m_ObjectHideFlags: 0

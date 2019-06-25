@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: AroundEnemyData
   m_EditorClassIdentifier: 
   Hp: 1
-  Score: 300
+  Score: 200
   MoveSpeed: 0.15

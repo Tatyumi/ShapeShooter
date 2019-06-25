@@ -20,8 +20,6 @@ public abstract class EnemyGenerator : MonoBehaviour
     public GameObject AroundEnemyPrefab;
     /// <summary>中ボス</summary>
     public GameObject MiddelBoss;
-    /// <summary>経過時間</summary>
-    protected float delta;
     /// <summary>各生成場所</summary>
     private Transform[] EnemyGeneratSpots;
     /// <summary>コルーチン</summary>

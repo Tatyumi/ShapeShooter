@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class LastBossSceneDirector : StageDirector
+﻿
+public sealed class LastBossSceneDirector : StageDirector
 {
     /// <summary>
     /// 初期化
@@ -13,7 +10,7 @@ public class LastBossSceneDirector : StageDirector
         audioManager = AudioManager.Instance;
 
         // BGMの再生
-        audioManager.PlayBGM(StageBgmName);
+        audioManager.PlayBGM(audioManager.LastBossSceneBGM.name);
 
         // フラグ初期化
         PauseManager.isPause = false;

@@ -4,6 +4,8 @@ public sealed class BossSceneBulletGenerator : BulletGenerator
 {
     /// <summary>ボス</summary>
     public GameObject Boss;
+    /// <summary>対象の座標</summary>
+    private Vector3 targetPos;
 
     /// <summary>
     /// 初期化
@@ -12,6 +14,9 @@ public sealed class BossSceneBulletGenerator : BulletGenerator
     {
         // オーディオマネージャーの取得
         audioManager = AudioManager.Instance;
+
+        // ボスの座標を取得
+        targetPos = Boss.transform.position;
     }
 
     /// <summary>
@@ -32,10 +37,10 @@ public sealed class BossSceneBulletGenerator : BulletGenerator
         if (Player != null)
         {
             // プレイヤーの座標から指定の距離をとった座標にゲームオブジェクトを配置
-            gameObject.transform.position = Vector3.Lerp(Player.transform.position, Boss.transform.position, 0.1f);
+            gameObject.transform.position = Vector3.Lerp(Player.transform.position, targetPos, 0.1f);
         }
 
         // ゲームオブジェクトの向きをボス方向に指定する
-        gameObject.transform.LookAt(Boss.transform.position);
+        gameObject.transform.LookAt(targetPos);
     }
 }

@@ -18,7 +18,7 @@ public class BossStageDirector : StageDirector
         audioManager = AudioManager.Instance;
 
         // BGMの再生
-        audioManager.PlayBGM(StageBgmName);
+        audioManager.PlayBGM(audioManager.BossSceneBGM.name);
 
         // フラグ初期化
         PauseManager.isPause = false;

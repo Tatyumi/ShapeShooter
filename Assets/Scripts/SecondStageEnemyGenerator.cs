@@ -1,8 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SecondStageEnemyGenerator : EnemyGenerator
+public sealed class SecondStageEnemyGenerator : EnemyGenerator
 {
     /// <summary>生成場所番号</summary>
     private enum GeneratSpot

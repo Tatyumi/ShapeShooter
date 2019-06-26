@@ -17,9 +17,11 @@ public class TitleDirector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // 画面がクリックされた場合
-        if (Input.GetMouseButtonDown(0))
+        // スペースキーを押したか判別
+        if (Input.GetKey(KeyCode.Space))
         {
+            // 押した場合
+
             // 音楽停止
             //audioManager.StopSound();
 

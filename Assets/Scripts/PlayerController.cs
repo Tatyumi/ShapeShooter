@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -71,7 +69,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // 衝突処理
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter()
     {
         // 死亡フラグ更新
         IsDie = true;

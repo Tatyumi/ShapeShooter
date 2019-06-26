@@ -2,12 +2,8 @@
 
 public class PlayerController : MonoBehaviour
 {
-    /// <summary>対象オブジェクト</summary>
-    public GameObject TargetObj;
     /// <summary>破壊演出</summary>
     public ParticleSystem DestroyDirection;
-    /// <summary>移動速度</summary>
-    public float MoveSpeed = 1.3f;
     /// <summary>ライフカウントテキスト</summary>
     public GameObject LifeCountText;
     /// <summary>死亡フラグ</summary>
@@ -21,16 +17,6 @@ public class PlayerController : MonoBehaviour
     {
         // 初期化
         Initialize();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // 回転処理
-        transform.Rotate(0, MoveSpeed, 0);
-
-        // 移動
-        Move();
     }
 
     /// <summary>
@@ -48,25 +34,6 @@ public class PlayerController : MonoBehaviour
         IsDie = false;
     }
 
-    /// <summary>
-    /// 移動処理
-    /// </summary>
-    protected virtual void Move()
-    {
-        // →を押した場合
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            // 対象オブジェクトの座標を中心に右に回転
-            transform.RotateAround(TargetObj.transform.position, Vector3.forward, MoveSpeed);
-        }
-
-        // ←を押した場合
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            // 対象オブジェクトの座標を中心に左に回転
-            transform.RotateAround(TargetObj.transform.position, Vector3.forward, MoveSpeed * -1);
-        }
-    }
 
     // 衝突処理
     private void OnCollisionEnter()
@@ -75,7 +42,7 @@ public class PlayerController : MonoBehaviour
         IsDie = true;
 
         // プレイヤーの位置にパーティクルシステムを配置
-        DestroyDirection.transform.localPosition = transform.localPosition;
+        DestroyDirection.transform.position = transform.position;
 
         // パーティクルシステムを再生
         DestroyDirection.Play();

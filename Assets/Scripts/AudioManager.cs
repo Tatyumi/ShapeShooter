@@ -43,6 +43,8 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip ThirdBossBulletSE;
     /// <summary>ワンアップSE</summary>
     public AudioClip OneUpSE;
+    /// <summary>チェンジフォームSE</summary>
+    public AudioClip ChaneFormSE;
     /// <summary>オーディオソース</summary>
     AudioSource audioSource;
     /// <summary>全SE保持ディクショナリ</summary>
@@ -91,6 +93,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { SecondBossBulletSE.name, SecondBossBulletSE },
             { ThirdBossBulletSE.name, ThirdBossBulletSE },
             { OneUpSE.name, OneUpSE },
+            { ChaneFormSE.name, ChaneFormSE }
         };
 
         // BGMを格納

@@ -78,43 +78,48 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
 
 
         // SEを格納
-        SEDic = new Dictionary<string, AudioClip> {
-            { BulletSE.name, BulletSE},
-            { DestroySE.name, DestroySE},
-            { PlayerDestroySE.name, PlayerDestroySE},
-            { DamageSE.name, DamageSE},
-            { NoDamageSE.name, NoDamageSE},
-            { ResultSE.name, ResultSE},
-            { BossBulletSE.name, BossBulletSE},
-            { TextOnSE.name, TextOnSE},
-            { BreakBarrierSE.name, BreakBarrierSE},
-            { SecondBossBulletSE.name, SecondBossBulletSE},
-            { ThirdBossBulletSE.name, ThirdBossBulletSE},
-            { OneUpSE.name, OneUpSE},
+        SEDic = new Dictionary<string, AudioClip>
+        {
+            { BulletSE.name, BulletSE },
+            { DestroySE.name, DestroySE },
+            { PlayerDestroySE.name, PlayerDestroySE },
+            { DamageSE.name, DamageSE },
+            { NoDamageSE.name, NoDamageSE },
+            { ResultSE.name, ResultSE },
+            { BossBulletSE.name, BossBulletSE },
+            { TextOnSE.name, TextOnSE },
+            { BreakBarrierSE.name, BreakBarrierSE },
+            { SecondBossBulletSE.name, SecondBossBulletSE },
+            { ThirdBossBulletSE.name, ThirdBossBulletSE },
+            { OneUpSE.name, OneUpSE },
         };
 
         // BGMを格納
         BGMDic = new Dictionary<string, AudioClip>
         {
-            {FirstStageBGM.name,FirstStageBGM },
-            {SecondStageBGM.name,SecondStageBGM },
-            {ThirdStageBGM.name,ThirdStageBGM },
-            {BossSceneBGM.name,BossSceneBGM },
-            {EndingBGM.name,EndingBGM },
-            {HiddenStageBGM.name,HiddenStageBGM },
-            {LastBossSceneBGM.name,LastBossSceneBGM }
+            { TitleSceneBGM.name,TitleSceneBGM },
+            { FirstStageBGM.name,FirstStageBGM },
+            { SecondStageBGM.name,SecondStageBGM },
+            { ThirdStageBGM.name,ThirdStageBGM },
+            { BossSceneBGM.name,BossSceneBGM },
+            { EndingBGM.name,EndingBGM },
+            { HiddenStageBGM.name,HiddenStageBGM },
+            { LastBossSceneBGM.name,LastBossSceneBGM }
         };
     }
 
     private void Update()
     {
+        // フラグチェック
         if (isFadeOut)
         {
+            // trueの場合
+
             // 徐々にボリュームを下げる
             audioSource.volume -= Time.deltaTime * fadeSpeed;
 
             // ボリュームが0以下か判別
-            if(audioSource.volume <= 0)
+            if (audioSource.volume <= 0)
             {
                 // 0以下の場合
 
@@ -135,6 +140,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     /// </summary>
     public void FadeOutBGM()
     {
+        // フラグ更新
         isFadeOut = true;
     }
 
@@ -145,9 +151,12 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     /// <param name="BGMName">BGMの名前</param>
     public void PlayBGM(string BGMName)
     {
-        // 名前のチェック
+        // 名前の存在チェック
         if (!BGMDic.ContainsKey(BGMName))
         {
+            // 該当しない場合
+
+            // ログを表示
             Debug.Log(BGMName + "という名前のBGMがありません");
             return;
         }
@@ -163,9 +172,12 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     /// <param name="SEName">SEの名前</param>
     public void PlaySE(string SEName)
     {
-        // 名前のチェック
+        // 名前の存在チェック
         if (!SEDic.ContainsKey(SEName))
         {
+            // 該当しない場合
+
+            // ログを表示
             Debug.Log(SEName + "という名前のSEがありません");
             return;
         }

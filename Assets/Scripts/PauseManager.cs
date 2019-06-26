@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
-public class PauseManager : MonoBehaviour
+public sealed class PauseManager : MonoBehaviour
 {
     /// <summary>ポーズフラグ</summary>
 	public static bool isPause;
@@ -30,6 +28,7 @@ public class PauseManager : MonoBehaviour
         // 初期化
         Initialize();
     }
+
 
     void Update()
     {

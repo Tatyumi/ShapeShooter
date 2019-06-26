@@ -6219,7 +6219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetObj: {fileID: 1362627653}
-  MoveSpeed: 1.3
+  MoveSpeed: 1.4
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -6538,7 +6538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyBulletGeneratorData: {fileID: 11400000, guid: 9ccbc6313d4642f48b7327d3d64833aa,
     type: 2}
-  Player: {fileID: 201364342}
+  Player: {fileID: 697983889}
   BulletPrefab: {fileID: 5419445389126511686, guid: 4641dd0d19e40f44ba21997c797a5acc,
     type: 3}
   PauseManager: {fileID: 756705069}
@@ -6887,7 +6887,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802240259}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 1.8, z: 14.1}
+  m_LocalPosition: {x: -1, y: -0.58, z: 14.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 756705071}
@@ -6968,7 +6968,7 @@ MonoBehaviour:
   MiddleBossBulletGenerator: {fileID: 716784626}
   isBattle: 0
   Stage: {fileID: 1362627653}
-  Player: {fileID: 201364342}
+  Player: {fileID: 697983889}
 --- !u!1 &807719584
 GameObject:
   m_ObjectHideFlags: 0

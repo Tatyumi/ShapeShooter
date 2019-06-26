@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-sealed public class GuideLightController : MonoBehaviour
+public sealed class GuideLightController : MonoBehaviour
 {
     /// <summary>ステージ下部</summary>
     public GameObject StageBottom;

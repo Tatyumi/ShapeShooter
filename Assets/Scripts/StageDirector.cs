@@ -42,7 +42,7 @@ public class StageDirector : MonoBehaviour
     /// <summary>
     /// クリアしたステージに応じて次のステージ
     /// </summary>
-    /// <param name="stageName"></param>
+    /// <param name="stageName">ステージ名</param>
     /// <returns></returns>
     public static void NextStageMove(string stageName)
     {

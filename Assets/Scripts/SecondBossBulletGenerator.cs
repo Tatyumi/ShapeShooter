@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SecondBossBulletGenerator : EnemyBulletGenerator
+public sealed class SecondBossBulletGenerator : EnemyBulletGenerator
 {
     /// <summary>ボス</summary>
     public GameObject Boss;

@@ -1,22 +1,22 @@
 ﻿using UnityEngine;
 
-public sealed class BossSceneBulletGenerator : BulletGenerator
+public class BossSceneBulletGenerator : BulletGenerator
 {
     /// <summary>ボス</summary>
     public GameObject Boss;
     /// <summary>対象の座標</summary>
-    private Vector3 targetPos;
+    protected Vector3 targetPos;
 
     /// <summary>
     /// 初期化
     /// </summary>
     protected override void Initialize()
     {
-        // オーディオマネージャーの取得
-        audioManager = AudioManager.Instance;
-
         // ボスの座標を取得
         targetPos = Boss.transform.position;
+
+        // オーディオマネージャーの取得
+        audioManager = AudioManager.Instance;
     }
 
     /// <summary>

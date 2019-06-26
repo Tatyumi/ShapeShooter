@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 using Common;
 
-public class TitleDirector : MonoBehaviour
+public sealed class TitleDirector : MonoBehaviour
 {
     /// <summary>オーディオマネージャー</summary>
     private AudioManager audioManager;

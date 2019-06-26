@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ThirdBossController : EnemyController
+public sealed class ThirdBossController : EnemyController
 {
     /// <summary>ジェネレーター</summary>
     public EnemyBulletGenerator[] EnemyBulletGenerator;

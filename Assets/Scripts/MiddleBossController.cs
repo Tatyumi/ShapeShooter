@@ -10,20 +10,29 @@ public class MiddleBossController : EnemyController
     public bool isBattle;
 
     /// <summary>
-    /// 体力チェック
+    /// ダメージ適応処理
     /// </summary>
-    public override bool CheckHp()
+    public override void ApplyDamage(int damage)
     {
+        // ダメージ適応
+        hp -= damage;
+
         // hpチェック
         if (hp <= 0)
         {
-            // hpが0以下の場合
+            // 0以下の場合
 
-            // 破壊SE再生
+            // 破壊SEの再生
             audioManager.PlaySE(audioManager.DestroySE.name);
 
             // BGMをフェードアウトする
             audioManager.FadeOutBGM();
+
+            // スコア加算
+            ScoreController.AddScore(EnemyData.Score);
+
+            // 撃破数を加算
+            ResultPanelController.TempEnemyKillCount++;
 
             // nullチェック
             if (MiddleBossBulletGenerator != null)
@@ -46,7 +55,12 @@ public class MiddleBossController : EnemyController
             // 破棄する
             Destroy(gameObject);
         }
+        else
+        {
+            // 1以上の場合
 
-        return hp <= 0;
+            // ダメージSEを再生
+            audioManager.PlaySE(audioManager.DamageSE.name);
+        }
     }
 }

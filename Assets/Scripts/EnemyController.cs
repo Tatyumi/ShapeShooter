@@ -45,23 +45,37 @@ public class EnemyController : MonoBehaviour
     }
 
     /// <summary>
-    /// 体力チェック
+    /// ダメージ適応処理
     /// </summary>
-    public virtual bool CheckHp()
+    public virtual void ApplyDamage(int damage)
     {
+        // ダメージ適応
+        hp -= damage;
+
         // hpチェック
         if (hp <= 0)
         {
-            // hpが0以下の場合
+            // 0以下の場合
 
-            // 破壊SE再生
+            // 破壊SEの再生
             audioManager.PlaySE(audioManager.DestroySE.name);
+
+            // スコア加算
+            ScoreController.AddScore(EnemyData.Score);
+
+            // 撃破数を加算
+            ResultPanelController.TempEnemyKillCount++;
 
             // 破棄する
             Destroy(gameObject);
         }
+        else
+        {
+            // 1以上の場合
 
-        return hp <= 0;
+            // ダメージSEを再生
+            audioManager.PlaySE(audioManager.DamageSE.name);
+        }
     }
 
     /// <summary>

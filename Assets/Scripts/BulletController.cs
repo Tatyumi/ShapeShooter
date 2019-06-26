@@ -8,13 +8,8 @@ public sealed class BulletController : MonoBehaviour
     public BulletData BulletData;
     /// <summary>計測時間</summary>
     private float delta = 0.0f;
-    private AudioManager audioManager;
-
-    private void Awake()
-    {
-        // 音楽データの取得
-        audioManager = AudioManager.Instance;
-    }
+    /// <summary>ダメージ</summary>
+    private int damage = 1;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -47,27 +42,8 @@ public sealed class BulletController : MonoBehaviour
         {
             // nullではない場合
 
-            // Hpを1減らす
-            enemy.EnemyData.Hp -= 1;
-
-            // hpが0以下か判別
-            if (enemy.CheckHp())
-            {
-                // 0以下の場合
-
-                // スコア加算
-                ScoreController.AddScore(enemy.EnemyData.Score);
-
-                // 撃破数を加算
-                ResultPanelController.TempEnemyKillCount++;
-            }
-            else
-            {
-                // 1以上の場合
-
-                // ダメージSEを再生
-                audioManager.PlaySE(audioManager.DamageSE.name);
-            }
+            // ダメージ適応処理
+            enemy.ApplyDamage(damage);
         }
         else
         {
@@ -77,7 +53,7 @@ public sealed class BulletController : MonoBehaviour
             var enemyBullet = collision.gameObject.GetComponent<EnemyBulletController>();
 
             // nullチェック
-            if(enemyBullet != null)
+            if (enemyBullet != null)
             {
                 // nullではない場合
 

@@ -29,17 +29,17 @@ public class BarrierController : EnemyController
     }
 
     /// <summary>
-    /// 体力チェック
+    /// ダメージ適応処理
     /// </summary>
-    public override bool CheckHp()
+    public override void ApplyDamage(int damage)
     {
+        // ダメージ適応
+        hp -= damage;
+
         // hpチェック
         if (hp <= 0)
         {
-            // hpが0以下の場合
-
-            // 破壊SE再生
-            audioManager.PlaySE(audioManager.BreakBarrierSE.name);
+            // 0以下の場合
 
             // バリアの位置にパーティクルシステムを配置
             DestroyDirection.transform.localPosition = transform.localPosition;
@@ -51,10 +51,18 @@ public class BarrierController : EnemyController
             Boss.enabled = true;
             BossBulletGenerator.enabled = true;
 
+            // 破壊SEの再生
+            audioManager.PlaySE(audioManager.BreakBarrierSE.name);
+
             // 破棄する
             Destroy(gameObject);
         }
+        else
+        {
+            // 1以上の場合
 
-        return false;
+            // ダメージSEを再生
+            audioManager.PlaySE(audioManager.DamageSE.name);
+        }
     }
 }

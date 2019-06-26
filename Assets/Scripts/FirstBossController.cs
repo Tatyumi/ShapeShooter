@@ -19,26 +19,35 @@ public sealed class FirstBossController : EnemyController
     }
 
     /// <summary>
-    /// 体力チェック
+    /// ダメージ適応処理
     /// </summary>
-    public override bool CheckHp()
+    public override void ApplyDamage(int damage)
     {
+        // ダメージ適応
+        hp -= damage;
+
         // hpチェック
         if (hp <= 0)
         {
-            // hpが0以下の場合
+            // 0以下の場合
 
             // 音楽の停止
             audioManager.StopSound();
+
+            // 破壊SEの再生
+            audioManager.PlaySE(audioManager.DestroySE.name);
+
+            // スコア加算
+            ScoreController.AddScore(EnemyData.Score);
+
+            // 撃破数を加算
+            ResultPanelController.TempEnemyKillCount++;
 
             // ボスの位置にパーティクルシステムを配置
             DestroyDirection.transform.position = transform.position;
 
             // パーティクルシステムを再生
             DestroyDirection.Play();
-
-            // 破壊SE再生
-            audioManager.PlaySE(audioManager.DestroySE.name);
 
             // nullチェック
             if (EnemyBulletGenerator != null)
@@ -56,7 +65,13 @@ public sealed class FirstBossController : EnemyController
             enabled = false;
             gameObject.SetActive(false);
         }
+        else
+        {
+            // 1以上の場合
 
-        return hp <= 0;
+            // ダメージSEを再生
+            audioManager.PlaySE(audioManager.DamageSE.name);
+        }
     }
+
 }

@@ -53,7 +53,7 @@ public class StageDirector : MonoBehaviour
         int stageIndex = Array.IndexOf(sceneName.STAGE_NAMES, stageName);
 
         // 現在のステージの要素番号と全体のステージ数を比較
-        if (stageIndex != sceneName.STAGE_NAMES.Length - 1 )
+        if (stageIndex != sceneName.STAGE_NAMES.Length - 1)
         {
             // 異なる、つまり全てのステージをクリアしていない場合
 
@@ -65,7 +65,7 @@ public class StageDirector : MonoBehaviour
             // 等しい、つまりすべてのステージをクリアした場合
 
             // 全敵キャラを殺したかチェック
-            if(ResultPanelController.EnemyKillCount >= Constance.ALL_ENEMY_COUNT)
+            if (ResultPanelController.EnemyKillCount >= Constance.ALL_ENEMY_COUNT)
             {
                 // 殺した場合
 

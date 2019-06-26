@@ -60,9 +60,6 @@ public class EnemyController : MonoBehaviour
             // 破壊SE再生
             audioManager.PlaySE(audioManager.DestroySE.name);
 
-            // スコア加算
-            ScoreController.AddScore(EnemyData.Score);
-
             // 破棄する
             Destroy(gameObject);
             return true;

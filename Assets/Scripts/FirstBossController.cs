@@ -43,9 +43,6 @@ public sealed class FirstBossController : EnemyController
             // 破壊SE再生
             audioManager.PlaySE(audioManager.DestroySE.name);
 
-            // スコア加算
-            ScoreController.AddScore(EnemyData.Score);
-
             // nullチェック
             if (EnemyBulletGenerator != null)
             {

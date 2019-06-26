@@ -45,6 +45,9 @@ public sealed class BulletController : MonoBehaviour
             {
                 // 0になった場合
 
+                // スコア加算
+                ScoreController.AddScore(enemy.EnemyData.Score);
+
                 // 撃破数を加算
                 ResultPanelController.TempEnemyKillCount++;
             }

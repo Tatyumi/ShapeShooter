@@ -96,9 +96,6 @@ public sealed class LastBossController : EnemyController
             // 破壊SE再生
             audioManager.PlaySE(audioManager.DestroySE.name);
 
-            // スコア加算
-            ScoreController.AddScore(EnemyData.Score);
-
             // 表示
             EndMessagePanel.SetActive(true);
 

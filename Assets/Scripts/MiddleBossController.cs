@@ -28,9 +28,6 @@ public class MiddleBossController : EnemyController
             // BGMをフェードアウトする
             audioManager.FadeOutBGM();
 
-            // スコア加算
-            ScoreController.AddScore(EnemyData.Score);
-
             // nullチェック
             if (MiddleBossBulletGenerator != null)
             {

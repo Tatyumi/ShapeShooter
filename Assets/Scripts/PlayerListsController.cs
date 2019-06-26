@@ -12,16 +12,9 @@ public class PlayerListsController : MonoBehaviour
     private Transform playerListChildren;
     /// <summary>プレイヤーのフォーム</summary>
     private int playerForm = 0;
+    /// <summary>オーディオマネージャー</summary>
+    private AudioManager audioManager;
 
-    /// <summary>プレイヤーの形態</summary>
-    private enum Form
-    {
-        None = -1,
-        Default,
-        FirstBoss,
-        SecondBoss,
-        ThirdBoss
-    }
 
     private void Start()
     {
@@ -51,6 +44,9 @@ public class PlayerListsController : MonoBehaviour
     /// </summary>
     private void Initialize()
     {
+        // 音楽データ取得
+        audioManager = AudioManager.Instance;
+
         // 子要素を取得
         playerListChildren = gameObject.GetComponentInChildren<Transform>();
 
@@ -91,23 +87,32 @@ public class PlayerListsController : MonoBehaviour
     /// </summary>
     private void CahngeForm()
     {
-        // 加算
-        playerForm++;
-
-        // レベルを超えているかチェック
-        if (playerForm > PlayerLevel)
+        // プレイヤーレベルチェック
+        if (PlayerLevel > 0)
         {
-            // 超えた場合
+            // 0より大きい場合
 
-            // 初期値代入
-            playerForm = 0;
-        }
+            // SE再生
+            audioManager.PlaySE(audioManager.ChaneFormSE.name);
 
-        // playerListChildrenの子要素の有効、無効の切り替えを行う
-        for (int i = 0; i < playerListChildren.childCount; i++)
-        {
-            // 該当するBossを有効にする
-            playerListChildren.GetChild(i).gameObject.SetActive(playerForm == i);
+            // 加算
+            playerForm++;
+
+            // レベルを超えているかチェック
+            if (playerForm > PlayerLevel)
+            {
+                // 超えた場合
+
+                // 初期値代入
+                playerForm = 0;
+            }
+
+            // playerListChildrenの子要素の有効、無効の切り替えを行う
+            for (int i = 0; i < playerListChildren.childCount; i++)
+            {
+                // 該当するBossを有効にする
+                playerListChildren.GetChild(i).gameObject.SetActive(playerForm == i);
+            }
         }
     }
 }

@@ -1133,6 +1133,7 @@ MonoBehaviour:
   SecondBossBulletSE: {fileID: 8300000, guid: a2337e63b06b4a1469a22ec764d6c89c, type: 3}
   ThirdBossBulletSE: {fileID: 8300000, guid: ce3c730f5e1b1f048b1b3855f7be8ca9, type: 3}
   OneUpSE: {fileID: 8300000, guid: 4a9ebd63f777ed14587bf219d004c598, type: 3}
+  ChaneFormSE: {fileID: 8300000, guid: 514ca9ea41f60084c94fce1ca15b30d0, type: 3}
 --- !u!4 &1941266118
 Transform:
   m_ObjectHideFlags: 0

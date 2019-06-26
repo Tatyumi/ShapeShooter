@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LastBossController : EnemyController
 {
@@ -15,9 +13,9 @@ public class LastBossController : EnemyController
     /// <summary>初期位置</summary>
     private Vector3 startPos = new Vector3(-1, 60, 20.8f);
     /// <summary>落下速度</summary>
-    private float fallSpeed = 0.1f;
+    private const float fallSpeed = 0.1f;
     /// <summary>戦闘開始ポジション</summary>
-    private float battleStartPos = 0.0f;
+    private const float battleStartPos = 0.0f;
 
     // Update is called once per frame
     void Update()
@@ -30,7 +28,7 @@ public class LastBossController : EnemyController
         {
             // 達した場合
 
-
+            // 弾生成オブジェクトを有効にする
             BulletGenerator.SetActive(true);
         }
         else
@@ -117,5 +115,4 @@ public class LastBossController : EnemyController
             return false;
         }
     }
-
 }

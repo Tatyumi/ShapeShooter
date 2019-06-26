@@ -2,7 +2,7 @@
 using UnityEngine;
 using System;
 
-public class BossStageDirector : StageDirector
+public sealed class BossStageDirector : StageDirector
 {
     /// <summary>ボスオブジェクトリスト</summary>
     public GameObject BossLists;

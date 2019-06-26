@@ -48,16 +48,8 @@ public class MiddleBossController : EnemyController
 
             // 破棄する
             Destroy(gameObject);
-
-            return true;
         }
-        else
-        {
-            // hpが1以上の場合
 
-            // ダメージSEを再生
-            audioManager.PlaySE(audioManager.DamageSE.name);
-            return false;
-        }
+        return hp <= 0;
     }
 }

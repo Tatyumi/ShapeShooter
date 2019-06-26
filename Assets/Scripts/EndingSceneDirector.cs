@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿
 public class EndingSceneDirector : StageDirector
 {
     /// <summary>
@@ -13,7 +10,7 @@ public class EndingSceneDirector : StageDirector
         audioManager = AudioManager.Instance;
 
         // BGMの再生
-        audioManager.PlayBGM(StageBgmName);
+        audioManager.PlayBGM(audioManager.EndingBGM.name);
 
         // フラグ初期化
         PauseManager.isPause = false;

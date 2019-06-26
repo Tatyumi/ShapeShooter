@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class FadeOutUIController : MonoBehaviour
+public sealed class FadeOutUIController : MonoBehaviour
 {
     /// <summary>フェードスピード</summary>
     private float fadeSpeed = 0.01f;
     /// <summary>目標アルファ値</summary>
-    protected float targetAlpha = 0.0f;
+    private float targetAlpha = 0.0f;
     /// <summary>アクションパネル</summary>
     private Image FadeOutImage;
     /// <summary>色(RGB)</summary>

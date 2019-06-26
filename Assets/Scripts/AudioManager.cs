@@ -52,7 +52,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     /// <summary>初期ボリューム</summary>
     private float defaultVolume = 1.0f;
     /// <summary>フェードスピード</summary>
-    private float fadeSpeed = 0.3f;
+    private float fadeSpeed = 0.2f;
     /// <summary>フェードアウトフラグ</summary>
     private bool isFadeOut;
 

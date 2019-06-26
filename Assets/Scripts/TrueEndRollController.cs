@@ -1,8 +1,6 @@
-﻿using Common;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
-public class TrueEndRollController : MonoBehaviour
+public sealed class TrueEndRollController : MonoBehaviour
 {
     /// <summary>テキストのスクロールスピード</summary>
     private float textScrollSpeed = 70.0f;

@@ -1113,6 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74252de939f4244a86d1d83da28425b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TitleSceneBGM: {fileID: 8300000, guid: 3eeb5465bd8a2c249871037e47516387, type: 3}
   FirstStageBGM: {fileID: 8300000, guid: 7ae219bb59ae0694ea99fbbfca15acab, type: 3}
   SecondStageBGM: {fileID: 8300000, guid: e8a8205c8af8d29438ae84b453eca405, type: 3}
   ThirdStageBGM: {fileID: 8300000, guid: 3506cf60e2671a2499716e4fdc3ac0fd, type: 3}

@@ -23,7 +23,7 @@ public class TitleDirector : MonoBehaviour
             // 押した場合
 
             // 音楽停止
-            //audioManager.StopSound();
+            audioManager.StopSound();
 
             // インスタンス取得
             var SceneName = new SceneName();
@@ -39,7 +39,7 @@ public class TitleDirector : MonoBehaviour
     private void Initialize()
     {
         // 音楽データの取得
-        //audioManager = AudioManager.Instance;
+        audioManager = AudioManager.Instance;
 
         // 残機数初期化
         LifeCountTextController.LifeCount = 3;
@@ -50,9 +50,10 @@ public class TitleDirector : MonoBehaviour
         // 破壊した敵キャラの数を初期化
         ResultPanelController.EnemyKillCount = 0;
 
-        // TODO BGMの再生
-
         // 1upスコアの初期化
         ScoreController.OneUpScore = ScoreController.OneUpScoreBaseValue;
+
+        // BGMの再生
+        audioManager.PlayBGM(audioManager.TitleSceneBGM.name);
     }
 }

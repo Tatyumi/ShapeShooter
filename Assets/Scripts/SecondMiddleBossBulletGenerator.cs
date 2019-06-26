@@ -9,7 +9,7 @@ public class SecondMiddleBossBulletGenerator : EnemyBulletGenerator
     /// <summary>弾発射位置</summary>
     public GameObject[] MiddleBossGeneratSpots;
     /// <summary>セカンドステージの中ボスコントローラー</summary>
-    private SecondMiddleBossController secondMiddle;
+    private MiddleBossController secondMiddle;
 
     /// <summary>
     /// 初期化
@@ -20,7 +20,7 @@ public class SecondMiddleBossBulletGenerator : EnemyBulletGenerator
         audioManager = AudioManager.Instance;
 
         // コンポネントの取得
-        secondMiddle = MiddleBoss.GetComponent<SecondMiddleBossController>();
+        secondMiddle = MiddleBoss.GetComponent<MiddleBossController>();
     }
 
     /// <summary>

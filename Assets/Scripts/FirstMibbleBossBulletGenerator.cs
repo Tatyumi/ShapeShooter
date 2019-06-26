@@ -5,7 +5,7 @@ public sealed class FirstMibbleBossBulletGenerator : EnemyBulletGenerator
     /// <summary>中ボス</summary>
     public GameObject MiddleBoss;
     /// <summary>初期ステージのボスコントローラー</summary>
-    private FirstMiddleBossController firstMiddle;
+    private MiddleBossController firstMiddle;
 
     /// <summary>
     /// 初期化
@@ -16,7 +16,7 @@ public sealed class FirstMibbleBossBulletGenerator : EnemyBulletGenerator
         audioManager = AudioManager.Instance;
 
         // コンポネントの取得
-        firstMiddle = MiddleBoss.GetComponent<FirstMiddleBossController>();
+        firstMiddle = MiddleBoss.GetComponent<MiddleBossController>();
     }
 
     /// <summary>

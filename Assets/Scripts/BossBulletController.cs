@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-
-public class BossBulletController : EnemyBulletController
+﻿
+public sealed class BossBulletController : EnemyBulletController
 {
     /// <summary>
     /// 衝突処理

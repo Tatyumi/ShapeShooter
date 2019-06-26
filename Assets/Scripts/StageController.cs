@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class StageController : MonoBehaviour
+public sealed class StageController : MonoBehaviour
 {
     /// <summary>ステージのパーツ</summary>
     public GameObject[] StageParts;

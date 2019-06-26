@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndMessagePanelController : MonoBehaviour
+public sealed class EndMessagePanelController : MonoBehaviour
 {
     /// <summary>クリアメッセージ</summary>
     public GameObject ClearMessage;

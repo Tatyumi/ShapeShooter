@@ -7,9 +7,9 @@ public sealed class EndRollController : MonoBehaviour
     /// <summary>最後に表示するメッセージ</summary>
     public GameObject LastMessage;
     /// <summary>テキストのスクロールスピード</summary>
-    private float textScrollSpeed = 55.0f;
+    private const float textScrollSpeed = 55.0f;
     /// <summary>制限座標</summary>
-    private float limitPosition = 1235.0f;
+    private const float limitPosition = 1235.0f;
     /// <summary>エンドロール終了フラグ</summary>
     private bool isEndRoll = false;
     /// <summary>オーディオマネージャー</summary>
@@ -68,5 +68,4 @@ public sealed class EndRollController : MonoBehaviour
             }
         }
     }
-
 }

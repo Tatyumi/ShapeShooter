@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class HiddenStageWallGenerator : WallGenerator
+public sealed class HiddenStageWallGenerator : WallGenerator
 {
     /// <summary>白光画像</summary>
     public GameObject WhiteLightImage;

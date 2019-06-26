@@ -8,8 +8,8 @@ public sealed class FirstMiddleBossController : MiddleBossController
     public GameObject Player;
     /// <summary>回転速度</summary>
     private float rotateSpeed = 1.0f;
-    /// <summary>降下停止z座標</summary>
-    private float stopPositionZ;
+    /// <summary>降下停止y座標</summary>
+    private float stopPosition;
     /// <summary>降下速度</summary>
     private float fallSpeed = -0.05f;
 
@@ -31,8 +31,8 @@ public sealed class FirstMiddleBossController : MiddleBossController
         // 初期位置に配置
         transform.localPosition = new Vector3(Stage.transform.position.x, 8.0f, 12.0f);
 
-        // プレイヤーのz座標を取得
-        stopPositionZ = Player.transform.localPosition.z;
+        // プレイヤーのy座標を取得
+        stopPosition = Player.transform.position.y;
 
         // フラグ更新
         isBattle = false;
@@ -60,7 +60,7 @@ public sealed class FirstMiddleBossController : MiddleBossController
             // falseの場合
 
             // 座標に達しているか判別
-            if (transform.localPosition.y >= stopPositionZ)
+            if (transform.position.y >= stopPosition)
             {
                 //　下方向に移動
                 transform.Translate(0, fallSpeed, 0);

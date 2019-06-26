@@ -9,7 +9,7 @@ public sealed class EndRollController : MonoBehaviour
     /// <summary>テキストのスクロールスピード</summary>
     private float textScrollSpeed = 55.0f;
     /// <summary>制限座標</summary>
-    private float limitPosition = 1500.0f;
+    private float limitPosition = 1235.0f;
     /// <summary>エンドロール終了フラグ</summary>
     private bool isEndRoll = false;
     /// <summary>オーディオマネージャー</summary>

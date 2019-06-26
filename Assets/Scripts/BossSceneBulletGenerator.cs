@@ -33,12 +33,8 @@ public sealed class BossSceneBulletGenerator : BulletGenerator
         // ゲームオブジェクトをPauseManagerの子にする
         gameObject.transform.SetParent(PauseManager.transform, false);
 
-        // プレイヤーのnullチェック
-        if (Player != null)
-        {
-            // プレイヤーの座標から指定の距離をとった座標にゲームオブジェクトを配置
-            gameObject.transform.position = Vector3.Lerp(Player.transform.position, targetPos, 0.1f);
-        }
+        // プレイヤーの座標から指定の距離をとった座標にゲームオブジェクトを配置
+        gameObject.transform.position = Vector3.Lerp(Player.transform.position, targetPos, 0.1f);
 
         // ゲームオブジェクトの向きをボス方向に指定する
         gameObject.transform.LookAt(targetPos);

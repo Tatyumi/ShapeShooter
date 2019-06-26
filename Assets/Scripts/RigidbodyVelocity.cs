@@ -1,7 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using System;
 
 /// <summary>
 /// Rigidbodyの速度を保存しておくクラス

@@ -45,7 +45,7 @@ public class EnemyController : MonoBehaviour
     }
 
     /// <summary>
-    /// ダメージを適用する
+    /// 体力チェック
     /// </summary>
     public virtual bool CheckHp()
     {

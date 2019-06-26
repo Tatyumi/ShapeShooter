@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreController : MonoBehaviour
+public sealed class ScoreController : MonoBehaviour
 {
     /// <summary>残機数テキストコントローラーオブジェクト</summary>
     public GameObject LifeCountTextController;
@@ -55,7 +55,7 @@ public class ScoreController : MonoBehaviour
         {
             // 達した場合
 
-            // 1up処理
+            // ワンアップ処理
             life.OneUpLife();
 
             // ワンアップするスコアを更新する

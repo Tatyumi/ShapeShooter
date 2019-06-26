@@ -34,13 +34,10 @@ public sealed class ThirdBossController : EnemyController
     }
 
     /// <summary>
-    /// ダメージを適用する
+    /// 体力チェック
     /// </summary>
-    public override bool ApplyDamage()
+    public override bool CheckHp()
     {
-        // 体力を1減らす 
-        hp -= 1;
-
         // hpチェック
         if (hp <= 0)
         {

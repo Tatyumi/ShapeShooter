@@ -10,13 +10,10 @@ public class MiddleBossController : EnemyController
     public bool isBattle;
 
     /// <summary>
-    /// ダメージを適用する
+    /// 体力チェック
     /// </summary>
-    public override bool ApplyDamage()
+    public override bool CheckHp()
     {
-        // hpを1減らす 
-        hp -= 1;
-
         // hpチェック
         if (hp <= 0)
         {

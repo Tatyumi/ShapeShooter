@@ -47,10 +47,13 @@ public sealed class BulletController : MonoBehaviour
         {
             // nullではない場合
 
-            // ダメージを与えhpが0以下か判別
-            if (enemy.ApplyDamage())
+            // Hpを1減らす
+            enemy.EnemyData.Hp -= 1;
+
+            // hpが0以下か判別
+            if (enemy.CheckHp())
             {
-                // 0になった場合
+                // 0以下の場合
 
                 // スコア加算
                 ScoreController.AddScore(enemy.EnemyData.Score);

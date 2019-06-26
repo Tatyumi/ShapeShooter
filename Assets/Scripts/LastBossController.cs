@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class LastBossController : EnemyController
+public sealed class LastBossController : EnemyController
 {
     /// <summary>終了フラグ</summary>
     public static bool isEnd = false;

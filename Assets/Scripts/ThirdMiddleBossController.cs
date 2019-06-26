@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ThirdMiddleBossController : MiddleBossController
+public sealed class ThirdMiddleBossController : MiddleBossController
 {
     public Transform[] GeneratSpots;
     /// <summary>回転速度</summary>

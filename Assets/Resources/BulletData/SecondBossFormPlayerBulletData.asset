@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SecondBossFormPlayerBulletData
   m_EditorClassIdentifier: 
   Speed: 1.2
-  LifeTime: 3
+  LifeTime: 1

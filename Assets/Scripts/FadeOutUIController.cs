@@ -24,9 +24,11 @@ public sealed class FadeOutUIController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        // ゲームオブジェクトパネルがアクティブになった場合
+        // ゲームオブジェクトの活性状態チェック
         if (gameObject.activeSelf)
         {
+            // 活性状態の場合
+
             // アルファ値を加算しフェードインする
             FadeOutImage.color = new Color(red, green, blue, alpha);
             alpha -= fadeSpeed;

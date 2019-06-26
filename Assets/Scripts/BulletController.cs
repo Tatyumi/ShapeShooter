@@ -40,9 +40,11 @@ public sealed class BulletController : MonoBehaviour
         {
             // nullではない場合
 
-            // ダメージを与えて敵キャラを破壊した場合
+            // ダメージを与えhpが0になったか判別
             if (enemy.ApplyDamage())
             {
+                // 0になった場合
+
                 // 撃破数を加算
                 ResultPanelController.TempEnemyKillCount++;
             }
@@ -61,7 +63,6 @@ public sealed class BulletController : MonoBehaviour
 
                 // 弾衝突処理
                 enemyBullet.ConflictBullet();
-
             }
         }
 

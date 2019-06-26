@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SecondBossController : EnemyController
+public sealed class SecondBossController : EnemyController
 {
     /// <summary>破壊演出</summary>
     public ParticleSystem DestroyDirection;

@@ -4,9 +4,9 @@ public sealed class ThirdMiddleBossController : MiddleBossController
 {
     public Transform[] GeneratSpots;
     /// <summary>回転速度</summary>
-    private float rotateSpeed = -100.0f;
+    private const float rotateSpeed = -100.0f;
     /// <summary>最小Z座標</summary>
-    private float minPositionZ = 25.0f;
+    private const float minPositionZ = 25.0f;
 
     // Start is called before the first frame update
     void Start()

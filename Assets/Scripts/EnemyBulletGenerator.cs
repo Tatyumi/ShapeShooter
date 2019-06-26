@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyBulletGenerator : MonoBehaviour
 {
+    /// <summary>エネミーの弾生成データ</summary>
     public BulletGeneratorData EnemyBulletGeneratorData;
     /// <summary>プレイヤー</summary>
     public GameObject Player;

@@ -96,6 +96,9 @@ public sealed class LastBossController : EnemyController
             // 撃破数を加算
             ResultPanelController.TempEnemyKillCount++;
 
+            // プレイヤーレベル加算
+            PlayerListsController.PlayerLevel++;
+
             // ボスの位置にパーティクルシステムを配置
             DestroyDirection.transform.position = transform.position;
 

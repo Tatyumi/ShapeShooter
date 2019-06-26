@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AudioManager : SingletonMonoBehaviour<AudioManager>
 {
+    /// <summary>タイトルシーンのBGM</summary>
+    public AudioClip TitleSceneBGM;
     /// <summary>ファーストステージのBGM</summary>
     public AudioClip FirstStageBGM;
     /// <summary>セカンドステージのBGM[</summary>

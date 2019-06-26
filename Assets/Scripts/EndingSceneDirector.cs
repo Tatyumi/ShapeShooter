@@ -1,5 +1,5 @@
 ﻿
-public class EndingSceneDirector : StageDirector
+public sealed class EndingSceneDirector : StageDirector
 {
     /// <summary>
     /// 初期化

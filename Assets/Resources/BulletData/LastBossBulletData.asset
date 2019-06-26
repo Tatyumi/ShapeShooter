@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01976cc645ad8b24dba193ccceefd709, type: 3}
-  m_Name: SecondMiddleBossBulletData
+  m_Name: LastBossBulletData
   m_EditorClassIdentifier: 
-  Speed: 0.3
-  LifeTime: 2
+  Speed: 0.4
+  LifeTime: 3

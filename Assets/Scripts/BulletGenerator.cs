@@ -8,12 +8,12 @@ public class BulletGenerator : MonoBehaviour
     public GameObject BulletPrefab;
     /// <summary>ポーズマネージャー</summary>
     public GameObject PauseManager;
+    /// <summary>弾生成データ</summary>
+    public BulletGeneratorData BulletGeneratorData;
     /// <summary>弾発生座標とプレイヤーまでの距離</summary>
     protected Vector3 offset;
     /// <summary>オーディオマネージャー</summary>
     protected AudioManager audioManager;
-    /// <summary>生成間隔</summary>
-    private float span = 0.5f;
     /// <summary>計測時間</summary>
     private float delta = 0.0f;
 
@@ -31,7 +31,7 @@ public class BulletGenerator : MonoBehaviour
         delta += Time.deltaTime;
 
         // 一定時間経過したか判別
-        if (delta > span)
+        if (delta > BulletGeneratorData.Span)
         {
             // スペースキーを押した場合
             if (Input.GetKey(KeyCode.Space))

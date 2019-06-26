@@ -1,8 +1,7 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine.SceneManagement;
 using Common;
 
-public class WhiteLightImageController : FadeInUIController
+public sealed class WhiteLightImageController : FadeInUIController
 {
     /// <summary>シーン遷移時の演出</summary>
     protected override void SceneMoveAction()

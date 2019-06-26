@@ -6,6 +6,8 @@ public class MiddleBossController : EnemyController
     public GameObject WhiteLightImage;
     /// <summary>ジェネレーター</summary>
     public GameObject MiddleBossBulletGenerator;
+    /// <summary>戦闘フラグ</summary>
+    public bool isBattle;
 
     /// <summary>
     /// ダメージを適用する

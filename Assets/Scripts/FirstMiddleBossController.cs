@@ -8,8 +8,6 @@ public class FirstMiddleBossController : MiddleBossController
     public GameObject Player;
     /// <summary>回転速度</summary>
     private float rotateSpeed = 1.0f;
-    /// <summary>戦闘フラグ</summary>
-    public bool isBattle;
     /// <summary>降下停止z座標</summary>
     private float stopPositionZ;
     /// <summary>降下速度</summary>

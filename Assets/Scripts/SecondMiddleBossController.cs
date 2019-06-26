@@ -8,8 +8,6 @@ public class SecondMiddleBossController : MiddleBossController
     public GameObject Stage;
     /// <summary>プレイヤー</summary>
     public GameObject Player;
-    /// <summary>戦闘フラグ</summary>
-    public bool isBattle;
     /// <summary>降下停止z座標</summary>
     private float stopPositionY;
     /// <summary>降下速度</summary>

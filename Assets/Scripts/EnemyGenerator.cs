@@ -1,8 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using System.Threading;
 
 public abstract class EnemyGenerator : MonoBehaviour
 {
@@ -60,13 +57,13 @@ public abstract class EnemyGenerator : MonoBehaviour
     protected void GeneratEnemy(int spotNum)
     {
         //生成するプレファブをゲームオブジェクトに変換
-        var gameObject = Instantiate(StandardEnemyPrefab) as GameObject;
+        var enemyObj = Instantiate(StandardEnemyPrefab) as GameObject;
 
         //ゲームオブジェクトをPauseManagerの子にする
-        gameObject.transform.SetParent(PauseManager.transform, false);
+        enemyObj.transform.SetParent(PauseManager.transform, false);
 
         // ゲームオブジェクトを指定の座標に配置
-        gameObject.transform.SetPositionAndRotation(EnemyGeneratSpots[spotNum].position, EnemyGeneratSpots[spotNum].rotation);
+        enemyObj.transform.SetPositionAndRotation(EnemyGeneratSpots[spotNum].position, EnemyGeneratSpots[spotNum].rotation);
     }
 
     /// <summary>
@@ -76,16 +73,16 @@ public abstract class EnemyGenerator : MonoBehaviour
     protected void GeneratZigzagEnemy(int spotNum)
     {
         //生成するプレファブをゲームオブジェクトに変換
-        var gameObject = Instantiate(ZigzagdEnemyPrefab) as GameObject;
+        var enemyObj = Instantiate(ZigzagdEnemyPrefab) as GameObject;
 
         // ジグザグする対象のオブジェクトを取得する
-        gameObject.GetComponent<ZigzagEnemyController>().targetObject = StagePart;
+        enemyObj.GetComponent<ZigzagEnemyController>().targetObject = StagePart;
 
         //ゲームオブジェクトをPauseManagerの子にする
-        gameObject.transform.SetParent(PauseManager.transform, false);
+        enemyObj.transform.SetParent(PauseManager.transform, false);
 
         // ゲームオブジェクトを指定の座標に配置
-        gameObject.transform.SetPositionAndRotation(EnemyGeneratSpots[spotNum].position, EnemyGeneratSpots[spotNum].rotation);
+        enemyObj.transform.SetPositionAndRotation(EnemyGeneratSpots[spotNum].position, EnemyGeneratSpots[spotNum].rotation);
     }
 
     /// <summary>
@@ -95,16 +92,16 @@ public abstract class EnemyGenerator : MonoBehaviour
     protected void GeneratAroundEnemy(int spotNum)
     {
         //生成するプレファブをゲームオブジェクトに変換
-        var gameObject = Instantiate(AroundEnemyPrefab) as GameObject;
+        var enemyObj = Instantiate(AroundEnemyPrefab) as GameObject;
 
         // ジグザグする対象のオブジェクトを取得する
-        gameObject.GetComponent<AroundEnemyController>().targetVec = Stage.transform.position;
+        enemyObj.GetComponent<AroundEnemyController>().targetVec = Stage.transform.position;
 
         //ゲームオブジェクトをPauseManagerの子にする
-        gameObject.transform.SetParent(PauseManager.transform, false);
+        enemyObj.transform.SetParent(PauseManager.transform, false);
 
         // ゲームオブジェクトを指定の座標に配置
-        gameObject.transform.SetPositionAndRotation(EnemyGeneratSpots[spotNum].position, EnemyGeneratSpots[spotNum].rotation);
+        enemyObj.transform.SetPositionAndRotation(EnemyGeneratSpots[spotNum].position, EnemyGeneratSpots[spotNum].rotation);
     }
 
     /// <summary>

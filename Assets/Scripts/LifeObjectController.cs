@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class LifeObjectController : MonoBehaviour
+public sealed class LifeObjectController : MonoBehaviour
 {
     /// <summary>回転速度</summary>
     private float rotationSpeed = 1.0f;

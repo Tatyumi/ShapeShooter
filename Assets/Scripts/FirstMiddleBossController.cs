@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class FirstMiddleBossController : MiddleBossController
+public sealed class FirstMiddleBossController : MiddleBossController
 {
     /// <summary>ステージ</summary>
     public GameObject Stage;

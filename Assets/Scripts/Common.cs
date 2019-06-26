@@ -13,7 +13,7 @@
         public const string HIDDEN_STAGE_SCENE = "HiddenStageScene";
         /// <summary>ラズボスシーン名</summary>
         public const string LAST_BOSS_SCENE = "LastBossScene";
-        /// <summary>ステージ名</summary>
+        /// <summary>各ステージ名</summary>
         public readonly string[] STAGE_NAMES = {
             "FirstStageScene",
             "SecondStageScene",

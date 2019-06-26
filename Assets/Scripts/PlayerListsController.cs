@@ -3,7 +3,7 @@
 public class PlayerListsController : MonoBehaviour
 {
     /// <summary>プレイヤーのレベル</summary>
-    public static int PlayerLevel = 3;
+    public static int PlayerLevel = 0;
     /// <summary>対象オブジェクト</summary>
     public GameObject TargetObj;
     /// <summary>移動速度</summary>

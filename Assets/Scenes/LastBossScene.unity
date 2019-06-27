@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 215292574}
-  BulletPrefab: {fileID: 1243992358090077085, guid: 70f635698bc545044be6fdb95b6b2764,
+  BulletPrefab: {fileID: 4524948415540651694, guid: 70f635698bc545044be6fdb95b6b2764,
     type: 3}
   PauseManager: {fileID: 641140787}
   BulletGeneratorData: {fileID: 11400000, guid: f185cec9cb4287a4e918462a4662b9af,
@@ -11093,7 +11093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 262030808}
-  BulletPrefab: {fileID: 3371315347968399283, guid: e87932dcc5fb289468f951fc6d47c9c8,
+  BulletPrefab: {fileID: 8718129797042638090, guid: e87932dcc5fb289468f951fc6d47c9c8,
     type: 3}
   PauseManager: {fileID: 641140787}
   BulletGeneratorData: {fileID: 11400000, guid: a3d14cecaf7bb764ca940ac7fbb81b97,

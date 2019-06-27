@@ -53,8 +53,14 @@ public sealed class TitleDirector : MonoBehaviour
         // 1upスコアの初期化
         ScoreController.OneUpScore = ScoreController.OneUpScoreBaseValue;
 
-        // プレイヤーレベルの初期化
-        PlayerListsController.PlayerLevel = 0;
+        // プレイヤーレベルが最大か判別
+        if (PlayerListsController.PlayerLevel != PlayerListsController.MaxLevel)
+        {
+            // 最大でない場合
+
+            // プレイヤーレベルの初期化
+            PlayerListsController.PlayerLevel = 0;
+        }
 
         // BGMの再生
         audioManager.PlayBGM(audioManager.TitleSceneBGM.name);

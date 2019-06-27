@@ -4,6 +4,8 @@ public class PlayerListsController : MonoBehaviour
 {
     /// <summary>プレイヤーのレベル</summary>
     public static int PlayerLevel = 0;
+    /// <summary>最大レベル</summary>
+    public static int MaxLevel = 4;
     /// <summary>対象オブジェクト</summary>
     public GameObject TargetObj;
     /// <summary>移動速度</summary>
@@ -14,8 +16,6 @@ public class PlayerListsController : MonoBehaviour
     private int playerForm = 0;
     /// <summary>オーディオマネージャー</summary>
     private AudioManager audioManager;
-    /// <summary>最大レベル</summary>
-    private static int maxLevel = 4;
 
 
     private void Start()

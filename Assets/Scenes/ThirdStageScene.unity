@@ -10736,7 +10736,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 0.0028924954, g: 0.6132076, b: 0.045805275, a: 1}
+  m_Color: {r: 0, g: 0.16666651, b: 1, a: 1}
   m_Intensity: 1.2
   m_Range: 50
   m_SpotAngle: 30
@@ -16655,7 +16655,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 0.0028924954, g: 0.6132076, b: 0.045805275, a: 1}
+  m_Color: {r: 0, g: 0.16666651, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30

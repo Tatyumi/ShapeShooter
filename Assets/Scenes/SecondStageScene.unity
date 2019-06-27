@@ -20772,7 +20772,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "PUSH \u300CC\u300DKEY\nCHANGE FORM!"
+  m_Text: "PUSH  \u300CC\u300D KEY\nCHANGE FORM!"
 --- !u!222 &707277199
 CanvasRenderer:
   m_ObjectHideFlags: 0

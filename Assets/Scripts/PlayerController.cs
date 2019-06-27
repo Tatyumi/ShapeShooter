@@ -2,12 +2,12 @@
 
 public class PlayerController : MonoBehaviour
 {
+    /// <summary>死亡フラグ</summary>
+    public static bool IsDie;
     /// <summary>破壊演出</summary>
     public ParticleSystem DestroyDirection;
     /// <summary>ライフカウントテキスト</summary>
     public GameObject LifeCountText;
-    /// <summary>死亡フラグ</summary>
-    public static bool IsDie;
     /// <summary>オーディオマネージャー</summary>
     private AudioManager audioManager;
     /// <summary>ライフコントローラー</summary>

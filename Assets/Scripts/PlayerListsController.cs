@@ -14,6 +14,8 @@ public class PlayerListsController : MonoBehaviour
     private int playerForm = 0;
     /// <summary>オーディオマネージャー</summary>
     private AudioManager audioManager;
+    /// <summary>最大レベル</summary>
+    private static int maxLevel = 4;
 
 
     private void Start()
@@ -113,6 +115,21 @@ public class PlayerListsController : MonoBehaviour
                 // 該当するBossを有効にする
                 playerListChildren.GetChild(i).gameObject.SetActive(playerForm == i);
             }
+        }
+    }
+
+    /// <summary>
+    /// プレイヤーレベルアップ処理
+    /// </summary>
+    public static void LevelUp()
+    {
+        // プレイヤーレベルが最大か判別
+        if(PlayerLevel <= maxLevel)
+        {
+            // 最大でない場合
+
+            // 加算
+            PlayerLevel++;
         }
     }
 }

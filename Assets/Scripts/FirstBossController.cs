@@ -44,7 +44,7 @@ public sealed class FirstBossController : EnemyController
             ResultPanelController.TempEnemyKillCount++;
 
             // プレイヤーレベル加算
-            PlayerListsController.PlayerLevel++;
+            PlayerListsController.LevelUp();
 
             // ボスの位置にパーティクルシステムを配置
             DestroyDirection.transform.position = transform.position;

@@ -5,7 +5,7 @@ public sealed class TrueEndRollController : MonoBehaviour
     /// <summary>テキストのスクロールスピード</summary>
     private float textScrollSpeed = 70.0f;
     /// <summary>制限座標</summary>
-    private float limitPosition = 2700.0f;
+    private float limitPosition = 2850.0f;
 
     void Start()
     {

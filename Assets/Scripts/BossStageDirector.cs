@@ -30,7 +30,8 @@ public class BossStageDirector : StageDirector
         var sceneName = new SceneName();
 
         // 挑戦したステージ名からステージ名リストの要素番号を取得する
-        var activeBossNumber = Array.IndexOf(sceneName.STAGE_NAMES, ChallengeStageName);
+        //var activeBossNumber = Array.IndexOf(sceneName.STAGE_NAMES, ChallengeStageName);
+        var activeBossNumber = 0;
 
         // bossTransformsの子要素の有効、無効の切り替えを行う
         for (int i = 0; i < bossTransforms.childCount; i++)

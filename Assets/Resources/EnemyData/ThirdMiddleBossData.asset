@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ThirdMiddleBossData
   m_EditorClassIdentifier: 
   Hp: 10
-  Score: 1000
+  Score: 3000
   MoveSpeed: 1

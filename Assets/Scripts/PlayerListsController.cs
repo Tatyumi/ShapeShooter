@@ -124,7 +124,7 @@ public class PlayerListsController : MonoBehaviour
     public static void LevelUp()
     {
         // プレイヤーレベルが最大か判別
-        if(PlayerLevel <= maxLevel)
+        if(PlayerLevel < MaxLevel)
         {
             // 最大でない場合
 

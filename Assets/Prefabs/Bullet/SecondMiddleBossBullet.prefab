@@ -105,7 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269359f5d0d252742983d2d9a06b83b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletLight: {fileID: 2095626315837018114}
   EnemyBulletData: {fileID: 11400000, guid: 58a4f2db6ef5ffc4d800582c7ece0933, type: 2}
 --- !u!1 &2095626315837018114
 GameObject:
@@ -183,7 +182,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295

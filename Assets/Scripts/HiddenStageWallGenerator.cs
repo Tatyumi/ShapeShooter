@@ -203,13 +203,13 @@ public sealed class HiddenStageWallGenerator : WallGenerator
         GeneratWall((int)WallIndex.DiagonalRight);
         yield return wait;
 
-        // 縦壁
-        GeneratWall((int)WallIndex.Vertical);
-        // 左斜め壁
-        GeneratWall((int)WallIndex.DiagonalLeft);
-        // 右斜め壁
-        GeneratWall((int)WallIndex.DiagonalRight);
-        yield return wait;
+        //// 縦壁
+        //GeneratWall((int)WallIndex.Vertical);
+        //// 左斜め壁
+        //GeneratWall((int)WallIndex.DiagonalLeft);
+        //// 右斜め壁
+        //GeneratWall((int)WallIndex.DiagonalRight);
+        //yield return wait;
 
         // BGMのフェードアウト
         audioManager.FadeOutBGM();

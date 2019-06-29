@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FirstBossBulletData
   m_EditorClassIdentifier: 
   Speed: 0.5
-  LifeTime: 2
+  LifeTime: 1.5
